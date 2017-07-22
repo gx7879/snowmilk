@@ -1,0 +1,1388 @@
+@import "compass/css3"
+
+header
+	.top
+		img
+			display: block
+			width: 100%
+			height: 12px
+		
+	.bottom
+		+display-flex
+		+justify-content(space-between)
+		+align-items(center)
+		position: relative
+		height: 60px
+		padding: 0 20px
+		.logo
+		.menubtn
+		.menu
+			position: absolute
+			top: 100%
+			left: 0
+			width: 100%
+			display: none
+			z-index: 999
+			ul
+				text-align: center
+				
+				li
+					
+					border-bottom: 2px solid #fff
+					
+					&:nth-child(1)
+						background-color: #89D80E
+						a
+							&:before
+								content: url(../images/menu_icon01.png)
+					&:nth-child(2)
+						background-color: #5DB3F4
+						a
+							&:before
+								content: url(../images/menu_icon02.png)
+					&:nth-child(3)
+						background-color: #FFD41D
+						a
+							&:before
+								content: url(../images/menu_icon03.png)
+					&:nth-child(4)
+						background-color: #F27164
+						a
+							&:before
+								content: url(../images/menu_icon04.png)
+					&:nth-child(5)
+						background-color: #EF8A45
+						a
+							&:before
+								content: url(../images/menu_icon05.png)
+					&:nth-child(6)
+						background-color: #328DC6
+						border-bottom: 8px solid #fff
+						a
+							color: #fff
+							&:before
+								content: url(../images/menu_icon06.png)
+							
+					a
+						color: #000
+						height: 54px
+						font-size: 13px
+						width: 100%
+						+display-flex
+						+justify-content(center)
+						+align-items(center)
+						&:before
+							margin-right: 10px
+
+.content
+	.container-fluid
+		.slider_area
+			background-color: #FAFAF8
+			margin: 0 -15px 5px
+			padding: 10px 15px
+			.slider
+				img
+					width: 100%
+		.activity
+			text-align: center
+			
+			ul
+				li
+					border-radius: 10px
+					position: relative
+					margin-top: 24px
+					margin-bottom: 10px
+					display: inline-block
+					width: 100%
+					&:nth-child(1)
+						background-color: #89D80E
+					&:nth-child(2)
+						background-color: #5DB3F4
+					&:nth-child(3)
+						background-color: #FFD41D
+					&:nth-child(4)
+						background-color: #F27164
+					a
+						width: 100%
+						height: 70px
+						line-height: 70px
+						color: #424242
+						font-size: 17px
+						display: block
+						&:hover
+							text-decoration: none
+							
+						span
+							border-bottom: 1px dashed #fff
+							vertical-align: sub
+							padding: 0 15px 5px
+							
+					.icon
+						position: absolute
+						left: 50%
+						+transform(translate(-50%,-50%))
+		.announcementarea
+			background-image: url(../images/announcement_bg.jpg)
+			margin: 0 -15px
+			padding: 15px 25px
+			.announcement
+				.leftcolumn
+					display: none
+				.rightcolumn
+					.announcement_title_pic
+						+display-flex
+						+align-items(center)
+						height: 40px
+						margin-bottom: 15px
+						img
+							max-height: 100%
+							margin-right: 15px
+
+					p
+						color: #fff
+
+		.photo
+			padding: 20px 15px
+			margin: 0 -15px
+			background-image: url(../images/photo_bg.jpg)
+			.topcolumn
+				.searcharea
+					+display-flex
+					+justify-content(space-between)
+					+align-items(center)
+					margin-bottom: 20px
+					.border
+						padding: 4px
+						background-color: #328DC6
+						display: inline-block
+						border-radius: 6px
+						input
+							border-radius: 6px
+							border: 3px solid rgba(256,256,256, 0.8)
+							background-color: rgba(256,256,256, 0.3)
+							font-size: 14px
+							height: 36px
+							min-width: 245px
+						::-webkit-input-placeholder
+
+							color: #FFFFFF
+
+						::-moz-placeholder
+							color: #FFFFFF
+							opacity: 1
+
+						::-moz-placeholder
+							color: #FFFFFF
+							opacity: 1
+
+						::-ms-input-placeholder
+							color: #FFFFFF
+					a
+						img
+							width: 100%
+				.new_photo
+					text-align: center
+					
+					a
+						img
+							margin-bottom: 20px
+			.photo_list
+				text-align: center
+
+				
+				.photoarea
+					+display-flex
+					+flex-wrap(wrap)
+					.photobox
+						width: calc(50% - 5px)
+						box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2)
+						margin-bottom: 10px
+						&:nth-child(odd)
+							margin-right: 5px
+						&:nth-child(even)
+							margin-left: 5px
+						&:nth-child(1)
+							border-top: 6px solid #89D80E
+						&:nth-child(2)
+							border-top: 6px solid #5DB3F4
+						&:nth-child(3)
+							border-top: 6px solid #FFD41D
+						&:nth-child(4)
+							border-top: 6px solid #F27164
+						.pic
+							img
+								width: 100%
+						.info
+							color: #0071BB
+							font-size: 12px
+							padding: 8px 10px
+							background-color: #fff
+							+display-flex
+							+justify-content(space-between)
+							.rightcolumn
+								+display-flex
+								+align-items(flex-end)
+								.heart
+									img
+										display: block
+					.more_btn
+						margin: 10px auto 10px
+		.remarks
+			margin-top: 15px
+			img
+				width: 100%
+		.votearea
+			background-color: #FFD41D
+			overflow: hidden
+			border-radius: 0px 0px 10px 10px
+			margin-bottom: 40px
+			.vote_title_pic
+				background-color: #fff
+				img
+					width: 100%
+			.vote_content
+				margin: 0 5px 5px
+				border-radius: 10px
+				background-color: #fff
+				padding: 15px 10px
+				.description
+					padding: 5px 10px 0px
+					.title
+						margin-bottom: 10px
+					p
+						padding-left: 25px
+					.redfont
+						color: #F27164
+					.btn_group
+						+display-flex
+						+flex-direction(column)
+						padding-left: 25px
+						>*
+							+display-flex
+							margin-bottom: 13px
+						.vote_btn
+							margin-right: 8px
+				.vote_photo_list
+					.line
+						margin-bottom: 20px
+						img
+							width: 100%
+					.topcolumn
+						.searcharea
+							+display-flex
+							+justify-content(space-between)
+							+align-items(center)
+							margin-bottom: 20px
+							.border
+								padding: 4px
+								background-color: #328DC6
+								display: inline-block
+								border-radius: 6px
+								input
+									border-radius: 6px
+									border: 3px solid rgba(256,256,256, 0.8)
+									background-color: rgba(256,256,256, 0.3)
+									font-size: 14px
+									height: 36px
+									min-width: 245px
+								::-webkit-input-placeholder
+
+									color: #FFFFFF
+
+								::-moz-placeholder
+									color: #FFFFFF
+									opacity: 1
+
+								::-moz-placeholder
+									color: #FFFFFF
+									opacity: 1
+
+								::-ms-input-placeholder
+									color: #FFFFFF
+							a
+								img
+									width: 100%
+						.arrangement
+							+display-flex
+							+justify-content(space-around)
+							font-size: 18px
+							margin-bottom: 15px
+							.arrangement_btn
+								line-height: 22px
+								cursor: pointer
+								&:before
+									content: url(../images/arrangement_icon.png)
+									vertical-align: sub
+									width: 17px
+									height: 22px
+									display: inline-block
+									margin-right: 5px
+									
+									
+					.photo_list
+						text-align: center
+
+						
+						.photoarea
+							+display-flex
+							+flex-wrap(wrap)
+							.photobox
+								width: calc(50% - 5px)
+								box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2)
+								margin-bottom: 10px
+								&:nth-child(odd)
+									margin-right: 5px
+								&:nth-child(even)
+									margin-left: 5px
+								&:nth-child(4n+1)
+									border-top: 6px solid #89D80E
+								&:nth-child(4n+2)
+									border-top: 6px solid #5DB3F4
+								&:nth-child(4n+3)
+									border-top: 6px solid #FFD41D
+								&:nth-child(4n+4)
+									border-top: 6px solid #F27164
+								.pic
+									img
+										width: 100%
+								.info
+									color: #0071BB
+									font-size: 12px
+									padding: 8px 10px
+									background-color: #fff
+									+display-flex
+									+justify-content(space-between)
+									.bottomcolumn
+										+display-flex
+										+align-items(flex-end)
+										.heart
+											img
+												display: block
+									
+								.column_direction
+									+flex-direction(column)
+									.topcolumn
+										>*
+											text-align: left
+									.bottomcolumn
+										+display-flex
+										+justify-content(space-between)
+										.social
+											margin-right: 7px
+										.leftcolumn
+											+display-flex
+							.more_btn
+								margin: 10px auto 10px
+								width: 100%
+				.vote_info_area
+					.line
+						margin-bottom: 20px
+						img
+							width: 100%
+					.vote_info
+						padding: 0 10px
+						margin-bottom: 20px
+						.vote_info_pic
+							border-top: 6px solid #FFD41D
+							margin-bottom: 15px
+							img
+								width: 100%
+						.vote_info_share
+							.topcolumn
+								+display-flex
+								+align-items(center)
+								margin-bottom: 15px
+								.share
+									+display-flex
+									.social
+										margin-right: 10px
+								.description
+									margin: 0
+									padding: 0
+							.bottomcolumn
+								+display-flex
+								+justify-content(space-between)
+								+align-items(center)
+								.leftcolumn
+									color: #0071BB
+					.form
+						p
+							font-size: 16px
+							color: #F27164
+						.form_group
+							.question
+								font-size: 16px
+								color: #473729
+								span
+									color: #F27164
+							p
+								font-size: 12px
+								color: #473729
+							.checkbox
+								color: #473729
+								font-size: 14px
+								label
+									width: 100%
+								input[type~=text]
+									border-radius: 3px
+									background-color: #F5F5EB
+									border: 1px solid #DDDDDD
+									margin-left: 10px
+									width: calc(100% - 110px)
+							.contactinfo
+								+display-flex
+								+align-items(baseline)
+								margin-bottom: 10px
+								.name
+									font-size: 16px
+								.input_tip
+									margin-left: 10px
+									width: calc(100% - 84px)
+									+display-flex
+									+flex-wrap(wrap)
+									input
+										border-radius: 3px
+										background-color: #F5F5EB
+										border: 1px solid #DDDDDD
+										width: 100%
+										height: 35px
+									select
+										border-radius: 3px
+										border: 1px solid #DDDDDD
+										appearance: none
+										-moz-appearance: none
+										-webkit-appearance: none
+										background: #F5F5EB url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center
+										padding-right: 14px
+										width: calc((100% - 7px) / 2)
+										margin-right: 7px
+										margin-bottom: 10px
+										height: 35px
+										&:nth-child(2)
+											margin-right: 0
+
+									select::-ms-expand
+										display: none
+
+									.tip
+										color: #F27164
+										font-size: 14px
+									.singlecolumn
+										width: 100%
+										.verification_area
+											+display-flex
+											width: 100%
+											.verification_pic
+												border: 1px solid #DDDDDD
+												margin-left: 7px
+										.change_verification
+											cursor: pointer
+											font-size: 16px
+							.description
+								padding: 0
+								margin-bottom: 30px
+							.submit_btn
+								text-align: center
+							.mb30
+								margin-bottom: 30px
+							.mb20
+								margin-bottom: 20px
+
+
+footer
+	background-color: #FAFAF8
+	color: #0071BB
+	text-align: center
+	padding-top: 15px
+	.home
+		img
+			margin: auto
+	.copyright
+		padding: 15px 0
+		span
+			display: block
+			
+	.bottomcolumn
+		img
+			width: 100%
+			display: block
+			height: 12px
+
+@media only screen and (min-width: 481px)
+	header
+		.menubtn
+			display: none
+		.bottom
+			height: 113px
+			.menu
+				display: block
+				position: static
+				width: auto
+				ul
+					+display-flex
+					margin: 0
+					li
+						border: 0
+						margin-right: 30px
+						&:nth-child(1)
+							background-color: transparent
+							a
+								&:before
+									content: url(../images/menu_icon01.png)
+									background-color: #89D80E
+						&:nth-child(2)
+							background-color: transparent
+							a
+								&:before
+									content: url(../images/menu_icon02.png)
+									background-color: #5DB3F4
+						&:nth-child(3)
+							background-color: transparent
+							a
+								&:before
+									content: url(../images/menu_icon03.png)
+									background-color: #FFD41D
+						&:nth-child(4)
+							background-color: transparent
+							a
+								&:before
+									content: url(../images/menu_icon04.png)
+									background-color: #F27164
+						&:nth-child(5)
+							background-color: transparent
+							a
+								&:before
+									content: url(../images/menu_icon05.png)
+									background-color: #EF8A45
+						&:nth-child(6)
+							background-color: transparent
+							border: 0
+							margin: 0
+							a
+								color: #fff
+								
+								&:before
+									content: url(../images/menu_icon06.png)
+									background-color: #328DC6
+
+						a
+							+display-flex
+							+flex-direction(column)
+							height: 100%
+							
+							&:before
+								margin: 0
+								width: 50px
+								height: 50px
+								border-radius: 50%
+								+display-flex
+								+justify-content(center)
+								+align-items(center)
+								margin-bottom: 5px
+							span
+								color: #000
+								font-size: 12px
+	.content
+		.container-fluid
+			.slider_area
+				background-color: #FAFAF8
+				margin: 0 -15px 5px
+				padding: 10px 15px
+				.slider
+					img
+						width: 100%
+			.activity
+				text-align: center
+				
+				ul
+					+display-flex
+					li
+						margin-right: 7px
+						&:nth-child(1)
+							background-color: #89D80E
+						&:nth-child(2)
+							background-color: #5DB3F4
+						&:nth-child(3)
+							background-color: #FFD41D
+						&:nth-child(4)
+							background-color: #F27164
+							margin-right: 0
+						a
+							width: 100%
+							height: 110px
+							line-height: 110px
+							color: #424242
+							font-size: 17px
+							display: block
+							&:hover
+								text-decoration: none
+								
+							span
+								border-bottom: 1px dashed #fff
+								vertical-align: middle
+								padding: 0 15px 5px
+								
+						.icon
+							position: absolute
+							left: 50%
+							+transform(translate(-50%,-50%))
+			.announcementarea
+				.announcement
+					+display-flex
+					+align-items(center)
+					.leftcolumn
+						display: block
+						margin-right: 25px
+					.rightcolumn
+						.announcement_title_pic
+							+display-flex
+							+align-items(center)
+							height: 40px
+							margin-bottom: 15px
+							img
+								max-height: 100%
+								margin-right: 15px
+							.mobile
+								display: none
+			.photo
+				padding: 20px 15px
+				margin: 0 -15px
+				background-image: url(../images/photo_bg.jpg)
+				.topcolumn
+					+display-flex
+					+flex-direction(row-reverse)
+					+justify-content(space-around)
+					.searcharea
+						+display-flex
+						+justify-content(space-between)
+						+align-items(center)
+						margin-bottom: 20px
+						.border
+							margin-right: 15px
+
+						a
+							img
+								width: 100%
+					.new_photo
+						text-align: center
+						
+						a
+							img
+								margin-bottom: 20px
+				.photo_list
+					text-align: center
+
+					
+					.photoarea
+						+display-flex
+						+flex-wrap(wrap)
+						max-width: 512px
+						margin: auto
+						.photobox
+							width: calc(50% - 25px)
+							box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2)
+							margin-bottom: 10px
+							&:nth-child(odd)
+								margin-right: 25px
+							&:nth-child(even)
+								margin-left: 25px
+							&:nth-child(1)
+								border-top: 6px solid #89D80E
+							&:nth-child(2)
+								border-top: 6px solid #5DB3F4
+							&:nth-child(3)
+								border-top: 6px solid #FFD41D
+							&:nth-child(4)
+								border-top: 6px solid #F27164
+							.pic
+								img
+									width: 100%
+							.info
+								color: #0071BB
+								font-size: 12px
+								padding: 8px 10px
+								background-color: #fff
+								+display-flex
+								+justify-content(space-between)
+								.rightcolumn
+									+display-flex
+									+align-items(flex-end)
+									.heart
+										img
+											display: block
+						.more_btn
+							margin: 10px auto 10px
+			.remarks
+				margin-top: 15px
+				img
+					width: 100%
+			.votearea
+				.vote_title_pic
+					background-color: #fff
+					img
+						width: 100%
+				.vote_content
+					.description
+
+						.btn_group
+							+justify-content(center)
+							+flex-direction(row)
+					.vote_photo_list
+						.line
+							margin-bottom: 20px
+							img
+								width: 100%
+						>.topcolumn
+							max-width: 457px
+							margin: auto
+							.searcharea
+								+justify-content(center)
+								.border
+									margin-right: 15px
+									input
+										border-radius: 6px
+										border: 3px solid rgba(256,256,256, 0.8)
+										background-color: rgba(256,256,256, 0.3)
+										font-size: 14px
+										height: 36px
+										min-width: 245px
+									::-webkit-input-placeholder
+
+										color: #FFFFFF
+
+									::-moz-placeholder
+										color: #FFFFFF
+										opacity: 1
+
+									::-moz-placeholder
+										color: #FFFFFF
+										opacity: 1
+
+									::-ms-input-placeholder
+										color: #FFFFFF
+								a
+									img
+										width: 100%
+							.arrangement
+								+display-flex
+								+justify-content(space-around)
+								font-size: 18px
+								margin-bottom: 15px
+								.arrangement_btn
+									line-height: 22px
+									cursor: pointer
+									&:before
+										content: url(../images/arrangement_icon.png)
+										vertical-align: sub
+										width: 17px
+										height: 22px
+										display: inline-block
+										margin-right: 5px
+										
+										
+						.photo_list
+							text-align: center
+							max-width: 457px
+							margin: auto
+							
+							.photoarea
+								+display-flex
+								+flex-wrap(wrap)
+								.photobox
+									width: calc((100% - 37px) / 2)
+									box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2)
+									margin-bottom: 10px
+									&:nth-child(odd)
+										margin-right: calc(37px / 2)
+									&:nth-child(even)
+										margin-left: calc(37px / 2)
+									&:nth-child(1)
+										border-top: 6px solid #89D80E
+									&:nth-child(2)
+										border-top: 6px solid #5DB3F4
+									&:nth-child(3)
+										border-top: 6px solid #FFD41D
+									&:nth-child(4)
+										border-top: 6px solid #F27164
+									.pic
+										img
+											width: 100%
+									.info
+										color: #0071BB
+										font-size: 12px
+										padding: 8px 10px
+										background-color: #fff
+										+display-flex
+										+justify-content(space-between)
+										.bottomcolumn
+											+display-flex
+											+align-items(flex-end)
+											.heart
+												img
+													display: block
+										
+									.column_direction
+										+flex-direction(column)
+										.topcolumn
+											>*
+												text-align: left
+										.bottomcolumn
+											+display-flex
+											+justify-content(space-between)
+											.social
+												margin-right: 7px
+											.leftcolumn
+												+display-flex
+								.more_btn
+									margin: 10px auto 10px
+					.vote_info_area
+						.line
+							margin-bottom: 20px
+							img
+								width: 100%
+						.vote_info
+							+display-flex
+							>*
+								width: calc(50% - 10px)
+							.vote_info_pic
+								border-top: 6px solid #FFD41D
+								margin-bottom: 0px
+								margin-right: 10px
+								img
+									width: 100%
+							.vote_info_share
+								margin-left: 10px
+								+display-flex
+								+flex-direction(column)
+								+justify-content(space-between)
+								>*
+									height: 50%
+								.topcolumn
+									+align-items(flex-start)
+									+flex-direction(column)
+									margin-bottom: 10px
+									.share
+										+display-flex
+										margin-bottom: 10px
+										.social
+											margin-right: 10px
+									.description
+										margin: 0
+										padding: 0
+								.bottomcolumn
+									+display-flex
+									+justify-content(space-between)
+									+align-items(flex-start)
+									+flex-direction(column)
+									.leftcolumn
+										color: #0071BB
+										font-size: 16px
+						.form
+							p
+								font-size: 18px
+								color: #F27164
+							.form_group
+								.question
+									font-size: 16px
+									color: #473729
+									span
+										color: #F27164
+								p
+									font-size: 12px
+									color: #473729
+								.checkbox
+									color: #473729
+									font-size: 14px
+									label
+										width: 100%
+									input[type~=text]
+										border-radius: 3px
+										background-color: #F5F5EB
+										border: 1px solid #DDDDDD
+										margin-left: 10px
+										width: calc(100% - 110px)
+								.contactinfo
+									+display-flex
+									+align-items(baseline)
+									margin-bottom: 10px
+									.name
+										font-size: 16px
+									.input_tip
+										margin-left: 10px
+										width: calc(100% - 84px)
+										+align-items(center)
+										input
+											margin-right: 10px
+											max-width: 284px
+										select
+											width: 133px
+										select+input
+											width: 100%
+											width: 100%
+											max-width: none
+											margin-right: 0px
+
+										select::-ms-expand
+											display: none
+
+										.tip
+											color: #F27164
+											font-size: 14px
+										.singlecolumn
+											+display-flex
+											+align-items(center)
+											.verification_area
+												+display-flex
+												width: auto
+												margin-right: 10px
+												input
+													width: 133px
+
+
+
+								.mb30
+									margin-bottom: 30px
+								.mb20
+									margin-bottom: 20px
+
+	footer
+		.copyright
+			padding: 15px 0
+			span
+				display: none
+				
+				
+
+@media only screen and (min-width: 768px)
+	header
+		.bottom
+			height: 113px
+			max-width: 940px
+			margin: auto
+	.content
+		.container-fluid
+			.slider_area
+				.slider
+					max-width: 940px
+					margin: auto
+					img
+						width: 100%
+			.activity
+				max-width: 940px
+				margin: auto
+			.announcementarea
+				.announcement
+					max-width: 940px
+					margin: auto
+			.photo
+				padding: 20px 15px
+				margin: 0 -15px
+				background-image: url(../images/photo_bg.jpg)
+				>*
+					max-width: 940px
+					margin: auto
+				.topcolumn
+					+justify-content(space-between)
+					.searcharea
+						+display-flex
+						+justify-content(space-between)
+						+align-items(center)
+						margin-bottom: 20px
+						.border
+							margin-right: 15px
+
+						a
+							img
+								width: 100%
+					.new_photo
+						text-align: center
+						
+						a
+							img
+								margin-bottom: 20px
+				.photo_list
+					text-align: center
+
+					
+					.photoarea
+						+display-flex
+						+flex-wrap(wrap)
+						max-width: none
+						margin: auto
+						.photobox
+							width: calc((100% - 21px) / 4)
+							box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2)
+							margin-bottom: 10px
+							&:nth-child(odd)
+								margin-right: 7px
+							&:nth-child(even)
+								margin-left: 0px
+								margin-right: 7px
+							&:nth-child(1)
+								border-top: 6px solid #89D80E
+							&:nth-child(2)
+								border-top: 6px solid #5DB3F4
+							&:nth-child(3)
+								border-top: 6px solid #FFD41D
+							&:nth-child(4)
+								border-top: 6px solid #F27164
+								margin-right: 0px
+							.pic
+								img
+									width: 100%
+							.info
+								color: #0071BB
+								font-size: 12px
+								padding: 8px 10px
+								background-color: #fff
+								+display-flex
+								+justify-content(space-between)
+								.rightcolumn
+									+display-flex
+									+align-items(flex-end)
+									.heart
+										img
+											display: block
+								
+
+
+						.more_btn
+							margin: 10px auto 10px
+							width: 100%
+			.remarks
+				margin: 15px auto 0px
+				max-width: 940px
+				img
+					width: 100%
+			.votearea
+				max-width: 940px
+				margin: 0px auto 40px
+				.vote_title_pic
+					background-color: #fff
+					img
+						width: 100%
+				.vote_content
+					padding: 20px 30px
+					.description
+
+						.btn_group
+							+justify-content(center)
+							+flex-direction(row)
+					.vote_photo_list
+						.line
+							margin-bottom: 20px
+							img
+								width: 100%
+						>.topcolumn
+							max-width: none
+							margin: auto
+							+display-flex
+							+justify-content(space-between)
+							+align-items(center)
+							+flex-direction(row-reverse)
+
+							.searcharea
+								+justify-content(center)
+								.border
+									margin-right: 15px
+							.arrangement
+								+display-flex
+								+justify-content(space-around)
+
+								font-size: 18px
+								margin-bottom: 15px
+								.arrangement_btn
+									margin-right: 25px
+									&:before
+										margin-right: 5px
+										
+										
+						.photo_list
+							text-align: center
+							max-width: none
+							margin: auto
+							
+							.photoarea
+								+display-flex
+								+flex-wrap(wrap)
+								.photobox
+									width: calc((100% - 36px) / 4)
+									box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2)
+									margin-bottom: 10px
+									&:nth-child(odd)
+										margin-right: 12px
+									&:nth-child(even)
+										margin-left: 0px
+										margin-right: 12px
+									&:nth-child(1)
+										border-top: 6px solid #89D80E
+									&:nth-child(2)
+										border-top: 6px solid #5DB3F4
+									&:nth-child(3)
+										border-top: 6px solid #FFD41D
+									&:nth-child(4)
+										border-top: 6px solid #F27164
+									&:nth-child(4n)
+										margin-right: 0
+									.pic
+										img
+											width: 100%
+									.info
+										color: #0071BB
+										font-size: 12px
+										padding: 8px 10px
+										background-color: #fff
+										+display-flex
+										+justify-content(space-between)
+										.bottomcolumn
+											+display-flex
+											+align-items(flex-end)
+											.heart
+												img
+													display: block
+										
+									.column_direction
+										+flex-direction(column)
+										.topcolumn
+											>*
+												text-align: left
+										.bottomcolumn
+											+display-flex
+											+justify-content(space-between)
+											.social
+												margin-right: 7px
+											.leftcolumn
+												+display-flex
+								.more_btn
+									width: 100%
+					.votearea
+				.vote_title_pic
+					background-color: #fff
+					img
+						width: 100%
+				.vote_content
+					.description
+
+						.btn_group
+							+justify-content(center)
+							+flex-direction(row)
+					.vote_photo_list
+						.line
+							margin-bottom: 20px
+							img
+								width: 100%
+						>.topcolumn
+							max-width: 457px
+							margin: auto
+							.searcharea
+								+justify-content(center)
+								.border
+									margin-right: 15px
+									input
+										border-radius: 6px
+										border: 3px solid rgba(256,256,256, 0.8)
+										background-color: rgba(256,256,256, 0.3)
+										font-size: 14px
+										height: 36px
+										min-width: 245px
+									::-webkit-input-placeholder
+
+										color: #FFFFFF
+
+									::-moz-placeholder
+										color: #FFFFFF
+										opacity: 1
+
+									::-moz-placeholder
+										color: #FFFFFF
+										opacity: 1
+
+									::-ms-input-placeholder
+										color: #FFFFFF
+								a
+									img
+										width: 100%
+							.arrangement
+								+display-flex
+								+justify-content(space-around)
+								font-size: 18px
+								margin-bottom: 15px
+								.arrangement_btn
+									line-height: 22px
+									cursor: pointer
+									&:before
+										content: url(../images/arrangement_icon.png)
+										vertical-align: sub
+										width: 17px
+										height: 22px
+										display: inline-block
+										margin-right: 5px
+										
+										
+						.photo_list
+							text-align: center
+							max-width: 457px
+							margin: auto
+							
+							.photoarea
+								+display-flex
+								+flex-wrap(wrap)
+								.photobox
+									width: calc((100% - 37px) / 2)
+									box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2)
+									margin-bottom: 10px
+									&:nth-child(odd)
+										margin-right: calc(37px / 2)
+									&:nth-child(even)
+										margin-left: calc(37px / 2)
+									&:nth-child(1)
+										border-top: 6px solid #89D80E
+									&:nth-child(2)
+										border-top: 6px solid #5DB3F4
+									&:nth-child(3)
+										border-top: 6px solid #FFD41D
+									&:nth-child(4)
+										border-top: 6px solid #F27164
+									.pic
+										img
+											width: 100%
+									.info
+										color: #0071BB
+										font-size: 12px
+										padding: 8px 10px
+										background-color: #fff
+										+display-flex
+										+justify-content(space-between)
+										.bottomcolumn
+											+display-flex
+											+align-items(flex-end)
+											.heart
+												img
+													display: block
+										
+									.column_direction
+										+flex-direction(column)
+										.topcolumn
+											>*
+												text-align: left
+										.bottomcolumn
+											+display-flex
+											+justify-content(space-between)
+											.social
+												margin-right: 7px
+											.leftcolumn
+												+display-flex
+								.more_btn
+									margin: 10px auto 10px
+					.vote_info_area
+						.line
+							margin-bottom: 20px
+							img
+								width: 100%
+						.vote_info
+							padding: 0 50px
+							>*
+								width: calc(50% - 10px)
+							.vote_info_pic
+								border-top: 6px solid #FFD41D
+								margin-bottom: 0px
+								margin-right: 10px
+								img
+									width: 100%
+							.vote_info_share
+								margin-left: 10px
+								+display-flex
+								+flex-direction(column)
+								+justify-content(space-between)
+								.topcolumn
+									+align-items(baseline)
+									+flex-direction(row)
+									margin-bottom: 0px
+									height: (100%/3)
+									.share
+										+display-flex
+										margin-bottom: 10px
+										.social
+											margin-right: 10px
+									.description
+										margin: 0
+										padding: 0
+								.bottomcolumn
+									+display-flex
+									+justify-content(space-between)
+									+align-items(flex-start)
+									+flex-direction(column)
+									height: (100%/3*2)
+									.leftcolumn
+										font-size: 18px
+						.form
+							padding: 0 50px
+							p
+								font-size: 18px
+								color: #F27164
+							.form_group
+								.question
+									font-size: 16px
+									color: #473729
+									span
+										color: #F27164
+								p
+									font-size: 12px
+									color: #473729
+								.checkbox
+									color: #473729
+									font-size: 14px
+									label
+										width: 100%
+									input[type~=text]
+										border-radius: 3px
+										background-color: #F5F5EB
+										border: 1px solid #DDDDDD
+										margin-left: 10px
+										width: calc(100% - 110px)
+								.contactinfo
+									+display-flex
+									+align-items(baseline)
+									margin-bottom: 10px
+									.name
+										font-size: 16px
+									.input_tip
+										margin-left: 10px
+										width: calc(100% - 84px)
+										+align-items(center)
+										input
+											margin-right: 10px
+											max-width: 284px
+										select
+											width: 133px
+										select+input
+											width: 100%
+											width: 100%
+											max-width: none
+											margin-right: 0px
+
+										select::-ms-expand
+											display: none
+
+										.tip
+											color: #F27164
+											font-size: 14px
+										.singlecolumn
+											+display-flex
+											+align-items(center)
+											.verification_area
+												+display-flex
+												width: auto
+												margin-right: 10px
+												input
+													width: 133px
+	footer
+		.topcolumn
+			+display-flex
+			+justify-content(space-between)
+			+align-items(center)
+			+flex-direction(row-reverse)
+			max-width: 940px
+			margin: auto
+			.home
+				margin: 0
