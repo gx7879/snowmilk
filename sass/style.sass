@@ -231,7 +231,7 @@ header
 			margin-top: 15px
 			img
 				width: 100%
-		.votearea
+		.votearea,.electionarea
 			background-color: #FFD41D
 			overflow: hidden
 			border-radius: 0px 0px 10px 10px
@@ -251,6 +251,8 @@ header
 						margin-bottom: 10px
 					p
 						padding-left: 25px
+						>*
+							+display-flex
 					.redfont
 						color: #F27164
 					.btn_group
@@ -405,6 +407,27 @@ header
 								+align-items(center)
 								.leftcolumn
 									color: #0071BB
+						.election_pic
+							+display-flex
+							+flex-direction(column)
+							+align-items(center)
+							img
+								width: 100%
+								margin-bottom: 10px
+						.uploadphoto
+							color: #0071BB
+							.rules
+								font-size: 18px
+							ul
+								li
+									+display-flex
+									span
+										&:first-child
+											margin-right: 5px
+							.uploadbtn
+								text-align: center
+								cursor: pointer
+
 					.form
 						p
 							font-size: 16px
@@ -487,6 +510,10 @@ header
 								margin-bottom: 30px
 							.mb20
 								margin-bottom: 20px
+
+		.electionarea
+			background-color: #5DB3F4
+
 
 
 footer
