@@ -14,8 +14,8 @@ header
 		position: relative
 		height: 60px
 		padding: 0 20px
-		.logo
-		.menubtn
+		// .logo
+		// .menubtn
 		.menu
 			position: absolute
 			top: 100%
@@ -414,6 +414,7 @@ header
 							img
 								width: 100%
 								margin-bottom: 10px
+
 						.uploadphoto
 							color: #0071BB
 							.rules
@@ -427,6 +428,63 @@ header
 							.uploadbtn
 								text-align: center
 								cursor: pointer
+					.personal_info
+						.personal_info_pic
+							margin-bottom: 20px
+						.input_group
+
+							.name_area
+								font-size: 16px
+								+display-flex
+								+align-items(center)
+								margin-bottom: 8px
+								.tip
+									color: #F27164
+									font-size: 14px
+							.input_area
+								+display-flex
+								+flex-wrap(wrap)
+								margin-bottom: 15px
+								input
+									min-width: 245px
+									border-radius: 3px
+									background-color: #F5F5EB
+									border: 1px solid #DDDDDD
+									width: 100%
+									height: 35px
+								::-webkit-input-placeholder
+
+									color: #FFFFFF
+
+								::-moz-placeholder
+									color: #FFFFFF
+									opacity: 1
+
+								::-moz-placeholder
+									color: #FFFFFF
+									opacity: 1
+
+								::-ms-input-placeholder
+									color: #FFFFFF
+								select
+									border-radius: 3px
+									border: 1px solid #DDDDDD
+									appearance: none
+									-moz-appearance: none
+									-webkit-appearance: none
+									background: #F5F5EB url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center
+									padding-right: 14px
+									width: 122px
+									margin-right: 7px
+									margin-bottom: 10px
+									height: 35px
+									&:nth-child(2)
+										margin-right: 0
+
+								select::-ms-expand
+									display: none
+
+
 
 					.form
 						p
@@ -452,6 +510,11 @@ header
 									border: 1px solid #DDDDDD
 									margin-left: 10px
 									width: calc(100% - 110px)
+							.inline
+								display: inline-block
+								margin-right: 15px
+								&:nth-child(5)
+									margin: 0
 							.contactinfo
 								+display-flex
 								+align-items(baseline)
@@ -510,6 +573,50 @@ header
 								margin-bottom: 30px
 							.mb20
 								margin-bottom: 20px
+							.mb25
+								margin-bottom: 25px
+							.input_group
+								+display-flex
+								+align-items(center)
+								margin-bottom: 30px
+								.name_area
+									font-size: 16px
+									white-space: nowrap
+									.tip
+										color: #F27164
+										font-size: 14px
+								.input_area
+									width: 100%
+									input
+										border-radius: 3px
+										background-color: #F5F5EB
+										border: 1px solid #DDDDDD
+										width: 100%
+										height: 25px
+
+									::-webkit-input-placeholder
+
+										color: #FFFFFF
+
+									::-moz-placeholder
+										color: #FFFFFF
+										opacity: 1
+
+									::-moz-placeholder
+										color: #FFFFFF
+										opacity: 1
+
+									::-ms-input-placeholder
+										color: #FFFFFF
+									&:nth-child(2)
+										width: calc(100% - 16px)
+										margin: 0 8px
+							.notic_items
+								.notic_items_pic
+									margin-bottom: 25px
+							.inline_btn
+								+display-flex
+								+justify-content(space-around)
 
 		.electionarea
 			background-color: #5DB3F4
@@ -534,6 +641,11 @@ footer
 			width: 100%
 			display: block
 			height: 12px
+.desktop
+	display: none
+.moblie
+	display: block
+
 
 @media only screen and (min-width: 481px)
 	header
@@ -743,14 +855,14 @@ footer
 				margin-top: 15px
 				img
 					width: 100%
-			.votearea
+			.votearea,.electionarea
 				.vote_title_pic
 					background-color: #fff
 					img
 						width: 100%
 				.vote_content
+					margin: 0 14px 5px
 					.description
-
 						.btn_group
 							+justify-content(center)
 							+flex-direction(row)
@@ -863,10 +975,6 @@ footer
 								.more_btn
 									margin: 10px auto 10px
 					.vote_info_area
-						.line
-							margin-bottom: 20px
-							img
-								width: 100%
 						.vote_info
 							+display-flex
 							>*
@@ -904,6 +1012,39 @@ footer
 									.leftcolumn
 										color: #0071BB
 										font-size: 16px
+							.election_pic
+								margin-right: 10px
+							.uploadphoto
+								+display-flex
+								+flex-direction(column)
+								margin-left: 10px
+								line-height: 24px
+								.uploadbtn
+									text-align: left
+						.personal_info
+							+display-flex
+							+flex-wrap(wrap)
+							.input_group
+								+display-flex
+								+align-items(baseline)
+								width: 100%
+								.input_area
+									.tip
+										color: #F27164
+										font-size: 14px
+										input
+											min-width: none
+								&:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6),&:nth-child(7),&:nth-child(8)
+									width: 50%
+									.name_area
+										.name
+											white-space: nowrap
+									.input_area
+										input
+											min-width: 150px
+											max-width: 150px
+										.tip
+											width: 100%
 						.form
 							p
 								font-size: 18px
@@ -977,6 +1118,13 @@ footer
 			padding: 15px 0
 			span
 				display: none
+
+	.desktop
+		display: block
+		
+	.moblie
+		display: none
+		
 				
 				
 
@@ -1028,9 +1176,7 @@ footer
 							img
 								margin-bottom: 20px
 				.photo_list
-					text-align: center
-
-					
+					text-align: center				
 					.photoarea
 						+display-flex
 						+flex-wrap(wrap)
@@ -1081,7 +1227,7 @@ footer
 				max-width: 940px
 				img
 					width: 100%
-			.votearea
+			.votearea,.electionarea
 				max-width: 940px
 				margin: 0px auto 40px
 				.vote_title_pic
@@ -1128,7 +1274,6 @@ footer
 							text-align: center
 							max-width: none
 							margin: auto
-							
 							.photoarea
 								+display-flex
 								+flex-wrap(wrap)
@@ -1182,227 +1327,230 @@ footer
 												+display-flex
 								.more_btn
 									width: 100%
-					.votearea
-				.vote_title_pic
-					background-color: #fff
-					img
-						width: 100%
-				.vote_content
-					.description
+			// .votearea
+			// 	.vote_title_pic
+			// 		background-color: #fff
+			// 		img
+			// 			width: 100%
+			// 	.vote_content
+			// 		.description
 
-						.btn_group
-							+justify-content(center)
-							+flex-direction(row)
-					.vote_photo_list
-						.line
-							margin-bottom: 20px
-							img
-								width: 100%
-						>.topcolumn
-							max-width: 457px
-							margin: auto
-							.searcharea
-								+justify-content(center)
-								.border
-									margin-right: 15px
-									input
-										border-radius: 6px
-										border: 3px solid rgba(256,256,256, 0.8)
-										background-color: rgba(256,256,256, 0.3)
-										font-size: 14px
-										height: 36px
-										min-width: 245px
-									::-webkit-input-placeholder
+			// 			.btn_group
+			// 				+justify-content(center)
+			// 				+flex-direction(row)
+			// 		.vote_photo_list
+			// 			.line
+			// 				margin-bottom: 20px
+			// 				img
+			// 					width: 100%
+			// 			>.topcolumn
+			// 				max-width: 875px
+			// 				margin: auto
+			// 				.searcharea
+			// 					+justify-content(center)
+			// 					.border
+			// 						margin-right: 15px
+			// 						input
+			// 							border-radius: 6px
+			// 							border: 3px solid rgba(256,256,256, 0.8)
+			// 							background-color: rgba(256,256,256, 0.3)
+			// 							font-size: 14px
+			// 							height: 36px
+			// 							min-width: 245px
+			// 						::-webkit-input-placeholder
 
-										color: #FFFFFF
+			// 							color: #FFFFFF
 
-									::-moz-placeholder
-										color: #FFFFFF
-										opacity: 1
+			// 						::-moz-placeholder
+			// 							color: #FFFFFF
+			// 							opacity: 1
 
-									::-moz-placeholder
-										color: #FFFFFF
-										opacity: 1
+			// 						::-moz-placeholder
+			// 							color: #FFFFFF
+			// 							opacity: 1
 
-									::-ms-input-placeholder
-										color: #FFFFFF
-								a
-									img
-										width: 100%
-							.arrangement
-								+display-flex
-								+justify-content(space-around)
-								font-size: 18px
-								margin-bottom: 15px
-								.arrangement_btn
-									line-height: 22px
-									cursor: pointer
-									&:before
-										content: url(../images/arrangement_icon.png)
-										vertical-align: sub
-										width: 17px
-										height: 22px
-										display: inline-block
-										margin-right: 5px
+			// 						::-ms-input-placeholder
+			// 							color: #FFFFFF
+			// 					a
+			// 						img
+			// 							width: 100%
+			// 				.arrangement
+			// 					+display-flex
+			// 					+justify-content(space-around)
+			// 					font-size: 18px
+			// 					margin-bottom: 15px
+			// 					.arrangement_btn
+			// 						line-height: 22px
+			// 						cursor: pointer
+			// 						&:before
+			// 							content: url(../images/arrangement_icon.png)
+			// 							vertical-align: sub
+			// 							width: 17px
+			// 							height: 22px
+			// 							display: inline-block
+			// 							margin-right: 5px
 										
 										
-						.photo_list
-							text-align: center
-							max-width: 457px
-							margin: auto
-							
-							.photoarea
-								+display-flex
-								+flex-wrap(wrap)
-								.photobox
-									width: calc((100% - 37px) / 2)
-									box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2)
-									margin-bottom: 10px
-									&:nth-child(odd)
-										margin-right: calc(37px / 2)
-									&:nth-child(even)
-										margin-left: calc(37px / 2)
-									&:nth-child(1)
-										border-top: 6px solid #89D80E
-									&:nth-child(2)
-										border-top: 6px solid #5DB3F4
-									&:nth-child(3)
-										border-top: 6px solid #FFD41D
-									&:nth-child(4)
-										border-top: 6px solid #F27164
-									.pic
-										img
-											width: 100%
-									.info
-										color: #0071BB
-										font-size: 12px
-										padding: 8px 10px
-										background-color: #fff
-										+display-flex
-										+justify-content(space-between)
-										.bottomcolumn
-											+display-flex
-											+align-items(flex-end)
-											.heart
-												img
-													display: block
+			// 			.photo_list
+			// 				text-align: center
+			// 				max-width: 875px
+			// 				margin: auto
+			// 				.photoarea
+			// 					+display-flex
+			// 					+flex-wrap(wrap)
+			// 					.photobox
+			// 						width: calc((100% - 36px) / 4)
+			// 						box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2)
+			// 						margin-bottom: 10px
+			// 						&:nth-child(odd)
+			// 							margin-right: 0px
+			// 						&:nth-child(even)
+			// 							margin-left: 0px
+			// 						&:nth-child(n)
+			// 							border-top: 6px solid #89D80E
+			// 							margin-right: 6px
+			// 						&:nth-child(2n)
+			// 							border-top: 6px solid #5DB3F4
+			// 							margin-right: 6px
+			// 						&:nth-child(3n)
+			// 							border-top: 6px solid #FFD41D
+			// 							margin-right: 6px
+			// 						&:nth-child(4n)
+			// 							border-top: 6px solid #F27164
+			// 						.pic
+			// 							img
+			// 								width: 100%
+			// 						.info
+			// 							color: #0071BB
+			// 							font-size: 12px
+			// 							padding: 8px 10px
+			// 							background-color: #fff
+			// 							+display-flex
+			// 							+justify-content(space-between)
+			// 							.bottomcolumn
+			// 								+display-flex
+			// 								+align-items(flex-end)
+			// 								.heart
+			// 									img
+			// 										display: block
 										
-									.column_direction
-										+flex-direction(column)
-										.topcolumn
-											>*
-												text-align: left
-										.bottomcolumn
-											+display-flex
-											+justify-content(space-between)
-											.social
-												margin-right: 7px
-											.leftcolumn
-												+display-flex
-								.more_btn
-									margin: 10px auto 10px
-					.vote_info_area
-						.line
-							margin-bottom: 20px
-							img
-								width: 100%
-						.vote_info
-							padding: 0 50px
-							>*
-								width: calc(50% - 10px)
-							.vote_info_pic
-								border-top: 6px solid #FFD41D
-								margin-bottom: 0px
-								margin-right: 10px
-								img
-									width: 100%
-							.vote_info_share
-								margin-left: 10px
-								+display-flex
-								+flex-direction(column)
-								+justify-content(space-between)
-								.topcolumn
-									+align-items(baseline)
-									+flex-direction(row)
-									margin-bottom: 0px
-									height: (100%/3)
-									.share
-										+display-flex
-										margin-bottom: 10px
-										.social
-											margin-right: 10px
-									.description
-										margin: 0
-										padding: 0
-								.bottomcolumn
-									+display-flex
-									+justify-content(space-between)
-									+align-items(flex-start)
-									+flex-direction(column)
-									height: (100%/3*2)
-									.leftcolumn
-										font-size: 18px
-						.form
-							padding: 0 50px
-							p
-								font-size: 18px
-								color: #F27164
-							.form_group
-								.question
-									font-size: 16px
-									color: #473729
-									span
-										color: #F27164
-								p
-									font-size: 12px
-									color: #473729
-								.checkbox
-									color: #473729
-									font-size: 14px
-									label
-										width: 100%
-									input[type~=text]
-										border-radius: 3px
-										background-color: #F5F5EB
-										border: 1px solid #DDDDDD
-										margin-left: 10px
-										width: calc(100% - 110px)
-								.contactinfo
-									+display-flex
-									+align-items(baseline)
-									margin-bottom: 10px
-									.name
-										font-size: 16px
-									.input_tip
-										margin-left: 10px
-										width: calc(100% - 84px)
-										+align-items(center)
-										input
-											margin-right: 10px
-											max-width: 284px
-										select
-											width: 133px
-										select+input
-											width: 100%
-											width: 100%
-											max-width: none
-											margin-right: 0px
+			// 						.column_direction
+			// 							+flex-direction(column)
+			// 							.topcolumn
+			// 								>*
+			// 									text-align: left
+			// 							.bottomcolumn
+			// 								+display-flex
+			// 								+justify-content(space-between)
+			// 								.social
+			// 									margin-right: 7px
+			// 								.leftcolumn
+			// 									+display-flex
+			// 					.more_btn
+			// 						margin: 10px auto 10px
+						
+			// 		.vote_info_area
+			// 			.line
+			// 				margin-bottom: 20px
+			// 				img
+			// 					width: 100%
+			// 			.vote_info
+			// 				padding: 0 50px
+			// 				>*
+			// 					width: calc(50% - 10px)
+			// 				.vote_info_pic
+			// 					border-top: 6px solid #FFD41D
+			// 					margin-bottom: 0px
+			// 					margin-right: 10px
+			// 					img
+			// 						width: 100%
+			// 				.vote_info_share
+			// 					margin-left: 10px
+			// 					+display-flex
+			// 					+flex-direction(column)
+			// 					+justify-content(space-between)
+			// 					.topcolumn
+			// 						+align-items(baseline)
+			// 						+flex-direction(row)
+			// 						margin-bottom: 0px
+			// 						height: (100%/3)
+			// 						.share
+			// 							+display-flex
+			// 							margin-bottom: 10px
+			// 							.social
+			// 								margin-right: 10px
+			// 						.description
+			// 							margin: 0
+			// 							padding: 0
+			// 					.bottomcolumn
+			// 						+display-flex
+			// 						+justify-content(space-between)
+			// 						+align-items(flex-start)
+			// 						+flex-direction(column)
+			// 						height: (100%/3*2)
+			// 						.leftcolumn
+			// 							font-size: 18px
+			// 			.form
+			// 				padding: 0 50px
+			// 				p
+			// 					font-size: 18px
+			// 					color: #F27164
+			// 				.form_group
+			// 					.question
+			// 						font-size: 16px
+			// 						color: #473729
+			// 						span
+			// 							color: #F27164
+			// 					p
+			// 						font-size: 12px
+			// 						color: #473729
+			// 					.checkbox
+			// 						color: #473729
+			// 						font-size: 14px
+			// 						label
+			// 							width: 100%
+			// 						input[type~=text]
+			// 							border-radius: 3px
+			// 							background-color: #F5F5EB
+			// 							border: 1px solid #DDDDDD
+			// 							margin-left: 10px
+			// 							width: calc(100% - 110px)
+			// 					.contactinfo
+			// 						+display-flex
+			// 						+align-items(baseline)
+			// 						margin-bottom: 10px
+			// 						.name
+			// 							font-size: 16px
+			// 						.input_tip
+			// 							margin-left: 10px
+			// 							width: calc(100% - 84px)
+			// 							+align-items(center)
+			// 							input
+			// 								margin-right: 10px
+			// 								max-width: 284px
+			// 							select
+			// 								width: 133px
+			// 							select+input
+			// 								width: 100%
+			// 								width: 100%
+			// 								max-width: none
+			// 								margin-right: 0px
 
-										select::-ms-expand
-											display: none
+			// 							select::-ms-expand
+			// 								display: none
 
-										.tip
-											color: #F27164
-											font-size: 14px
-										.singlecolumn
-											+display-flex
-											+align-items(center)
-											.verification_area
-												+display-flex
-												width: auto
-												margin-right: 10px
-												input
-													width: 133px
+			// 							.tip
+			// 								color: #F27164
+			// 								font-size: 14px
+			// 							.singlecolumn
+			// 								+display-flex
+			// 								+align-items(center)
+			// 								.verification_area
+			// 									+display-flex
+			// 									width: auto
+			// 									margin-right: 10px
+			// 									input
+			// 										width: 133px
 	footer
 		.topcolumn
 			+display-flex
