@@ -231,7 +231,7 @@ header
 			margin-top: 15px
 			img
 				width: 100%
-		.votearea,.electionarea
+		.votearea,.electionarea,.activityarea
 			background-color: #FFD41D
 			overflow: hidden
 			border-radius: 0px 0px 10px 10px
@@ -262,8 +262,16 @@ header
 						>*
 							+display-flex
 							margin-bottom: 13px
+
 						.vote_btn
 							margin-right: 8px
+							height: 39px
+							img
+								width: auto
+								height: 100%
+					.line
+						img
+							width: 100%
 				.vote_photo_list
 					.line
 						margin-bottom: 20px
@@ -620,6 +628,8 @@ header
 
 		.electionarea
 			background-color: #5DB3F4
+		.activityarea
+			background-color: #89D80E
 
 
 
@@ -855,7 +865,7 @@ footer
 				margin-top: 15px
 				img
 					width: 100%
-			.votearea,.electionarea
+			.votearea,.electionarea,.activityarea
 				.vote_title_pic
 					background-color: #fff
 					img
@@ -1227,7 +1237,7 @@ footer
 				max-width: 940px
 				img
 					width: 100%
-			.votearea,.electionarea
+			.votearea,.electionarea,.activityarea
 				max-width: 940px
 				margin: 0px auto 40px
 				.vote_title_pic
@@ -1327,230 +1337,163 @@ footer
 												+display-flex
 								.more_btn
 									width: 100%
-			// .votearea
-			// 	.vote_title_pic
-			// 		background-color: #fff
-			// 		img
-			// 			width: 100%
-			// 	.vote_content
-			// 		.description
 
-			// 			.btn_group
-			// 				+justify-content(center)
-			// 				+flex-direction(row)
-			// 		.vote_photo_list
-			// 			.line
-			// 				margin-bottom: 20px
-			// 				img
-			// 					width: 100%
-			// 			>.topcolumn
-			// 				max-width: 875px
-			// 				margin: auto
-			// 				.searcharea
-			// 					+justify-content(center)
-			// 					.border
-			// 						margin-right: 15px
-			// 						input
-			// 							border-radius: 6px
-			// 							border: 3px solid rgba(256,256,256, 0.8)
-			// 							background-color: rgba(256,256,256, 0.3)
-			// 							font-size: 14px
-			// 							height: 36px
-			// 							min-width: 245px
-			// 						::-webkit-input-placeholder
+					.vote_info_area
+						.line
+							margin-bottom: 20px
+							img
+								width: 100%
+						.vote_info
+							padding: 0 50px
+							>*
+								width: calc(50% - 10px)
+							.vote_info_pic
+								border-top: 6px solid #FFD41D
+								margin-bottom: 0px
+								margin-right: 10px
+								img
+									width: 100%
+							.vote_info_share
+								.topcolumn
+									+align-items(baseline)
+									+flex-direction(row)
+									margin-bottom: 0px
+									height: (100%/3)
+									.share
+										+display-flex
+										margin-bottom: 10px
+										.social
+											margin-right: 10px
+									.description
+										margin: 0
+										padding: 0
+								.bottomcolumn
+									
+									height: (100%/3*2)
+									.leftcolumn
+										font-size: 18px
+						.personal_info
+							padding: 0 50px
+							.singlecolumn
+								+display-flex
+								+justify-content(space-between)
+								width: 100%
+								.input_group
+									width: auto
+									+display-flex
 
-			// 							color: #FFFFFF
+								&:nth-child(2)
+									.input_group
+										&:nth-child(1)
+											.input_area
+												width: 384px
+													
+										&:nth-child(2)
+											.input_area
+												width: 150px
+								&:nth-child(3)
+									.input_group
+										&:nth-child(1)
+											.input_area
+												width: 150px
+										&:nth-child(2)
+											.input_area
+												width: 95px
+										&:nth-child(3)
+											.input_area
+												width: 150px
+							.input_group
+								.name_area
+									white-space: nowrap
+								&:nth-child(5),&:nth-child(6)
+									width: 100%
+									.input_area
+										input
+											max-width: none
+											min-width: initial
+								.input_area
+									width: 100%
+									input
+										width: 100%
+										max-width: none
+										min-width: initial
+									.tip
+										white-space: nowrap
+									select
+										&:nth-child(2)
+											margin-right: auto
+									select+input
+										width: calc(100% - 258px)
+						.form
+							padding: 0 50px
+							p
+								font-size: 18px
+								color: #F27164
+							.form_group
+								.question
+									font-size: 16px
+									color: #473729
+									span
+										color: #F27164
+								p
+									font-size: 12px
+									color: #473729
+								.checkbox
+									color: #473729
+									font-size: 14px
+									label
+										width: 100%
+									input[type~=text]
+										border-radius: 3px
+										background-color: #F5F5EB
+										border: 1px solid #DDDDDD
+										margin-left: 10px
+										width: 252px
+								.contactinfo
+									+display-flex
+									+align-items(baseline)
+									margin-bottom: 10px
+									.name
+										font-size: 16px
+									.input_tip
+										margin-left: 10px
+										width: calc(100% - 84px)
+										+align-items(center)
+										input
+											margin-right: 10px
+											max-width: 284px
+										select
+											width: 133px
+										select+input
+											width: 100%
+											max-width: none
+											margin-right: 0px
 
-			// 						::-moz-placeholder
-			// 							color: #FFFFFF
-			// 							opacity: 1
+										select::-ms-expand
+											display: none
 
-			// 						::-moz-placeholder
-			// 							color: #FFFFFF
-			// 							opacity: 1
+										.tip
+											color: #F27164
+											font-size: 14px
+										.singlecolumn
+											+display-flex
+											+align-items(center)
+											.verification_area
+												+display-flex
+												width: auto
+												margin-right: 10px
+												input
+													width: 133px
+								.input_group
+									&:nth-child(11)
+										.input_area
+											&:nth-child(2)
+												width: 252px
+									&:nth-child(12)
+										.input_area
+											&:nth-child(2)
+												width: 130px
 
-			// 						::-ms-input-placeholder
-			// 							color: #FFFFFF
-			// 					a
-			// 						img
-			// 							width: 100%
-			// 				.arrangement
-			// 					+display-flex
-			// 					+justify-content(space-around)
-			// 					font-size: 18px
-			// 					margin-bottom: 15px
-			// 					.arrangement_btn
-			// 						line-height: 22px
-			// 						cursor: pointer
-			// 						&:before
-			// 							content: url(../images/arrangement_icon.png)
-			// 							vertical-align: sub
-			// 							width: 17px
-			// 							height: 22px
-			// 							display: inline-block
-			// 							margin-right: 5px
-										
-										
-			// 			.photo_list
-			// 				text-align: center
-			// 				max-width: 875px
-			// 				margin: auto
-			// 				.photoarea
-			// 					+display-flex
-			// 					+flex-wrap(wrap)
-			// 					.photobox
-			// 						width: calc((100% - 36px) / 4)
-			// 						box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2)
-			// 						margin-bottom: 10px
-			// 						&:nth-child(odd)
-			// 							margin-right: 0px
-			// 						&:nth-child(even)
-			// 							margin-left: 0px
-			// 						&:nth-child(n)
-			// 							border-top: 6px solid #89D80E
-			// 							margin-right: 6px
-			// 						&:nth-child(2n)
-			// 							border-top: 6px solid #5DB3F4
-			// 							margin-right: 6px
-			// 						&:nth-child(3n)
-			// 							border-top: 6px solid #FFD41D
-			// 							margin-right: 6px
-			// 						&:nth-child(4n)
-			// 							border-top: 6px solid #F27164
-			// 						.pic
-			// 							img
-			// 								width: 100%
-			// 						.info
-			// 							color: #0071BB
-			// 							font-size: 12px
-			// 							padding: 8px 10px
-			// 							background-color: #fff
-			// 							+display-flex
-			// 							+justify-content(space-between)
-			// 							.bottomcolumn
-			// 								+display-flex
-			// 								+align-items(flex-end)
-			// 								.heart
-			// 									img
-			// 										display: block
-										
-			// 						.column_direction
-			// 							+flex-direction(column)
-			// 							.topcolumn
-			// 								>*
-			// 									text-align: left
-			// 							.bottomcolumn
-			// 								+display-flex
-			// 								+justify-content(space-between)
-			// 								.social
-			// 									margin-right: 7px
-			// 								.leftcolumn
-			// 									+display-flex
-			// 					.more_btn
-			// 						margin: 10px auto 10px
-						
-			// 		.vote_info_area
-			// 			.line
-			// 				margin-bottom: 20px
-			// 				img
-			// 					width: 100%
-			// 			.vote_info
-			// 				padding: 0 50px
-			// 				>*
-			// 					width: calc(50% - 10px)
-			// 				.vote_info_pic
-			// 					border-top: 6px solid #FFD41D
-			// 					margin-bottom: 0px
-			// 					margin-right: 10px
-			// 					img
-			// 						width: 100%
-			// 				.vote_info_share
-			// 					margin-left: 10px
-			// 					+display-flex
-			// 					+flex-direction(column)
-			// 					+justify-content(space-between)
-			// 					.topcolumn
-			// 						+align-items(baseline)
-			// 						+flex-direction(row)
-			// 						margin-bottom: 0px
-			// 						height: (100%/3)
-			// 						.share
-			// 							+display-flex
-			// 							margin-bottom: 10px
-			// 							.social
-			// 								margin-right: 10px
-			// 						.description
-			// 							margin: 0
-			// 							padding: 0
-			// 					.bottomcolumn
-			// 						+display-flex
-			// 						+justify-content(space-between)
-			// 						+align-items(flex-start)
-			// 						+flex-direction(column)
-			// 						height: (100%/3*2)
-			// 						.leftcolumn
-			// 							font-size: 18px
-			// 			.form
-			// 				padding: 0 50px
-			// 				p
-			// 					font-size: 18px
-			// 					color: #F27164
-			// 				.form_group
-			// 					.question
-			// 						font-size: 16px
-			// 						color: #473729
-			// 						span
-			// 							color: #F27164
-			// 					p
-			// 						font-size: 12px
-			// 						color: #473729
-			// 					.checkbox
-			// 						color: #473729
-			// 						font-size: 14px
-			// 						label
-			// 							width: 100%
-			// 						input[type~=text]
-			// 							border-radius: 3px
-			// 							background-color: #F5F5EB
-			// 							border: 1px solid #DDDDDD
-			// 							margin-left: 10px
-			// 							width: calc(100% - 110px)
-			// 					.contactinfo
-			// 						+display-flex
-			// 						+align-items(baseline)
-			// 						margin-bottom: 10px
-			// 						.name
-			// 							font-size: 16px
-			// 						.input_tip
-			// 							margin-left: 10px
-			// 							width: calc(100% - 84px)
-			// 							+align-items(center)
-			// 							input
-			// 								margin-right: 10px
-			// 								max-width: 284px
-			// 							select
-			// 								width: 133px
-			// 							select+input
-			// 								width: 100%
-			// 								width: 100%
-			// 								max-width: none
-			// 								margin-right: 0px
-
-			// 							select::-ms-expand
-			// 								display: none
-
-			// 							.tip
-			// 								color: #F27164
-			// 								font-size: 14px
-			// 							.singlecolumn
-			// 								+display-flex
-			// 								+align-items(center)
-			// 								.verification_area
-			// 									+display-flex
-			// 									width: auto
-			// 									margin-right: 10px
-			// 									input
-			// 										width: 133px
 	footer
 		.topcolumn
 			+display-flex
