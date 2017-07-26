@@ -75,6 +75,7 @@ header
 							margin-right: 10px
 
 .content
+	background-color: #F5F5EB
 	.container-fluid
 		.slider_area
 			background-color: #FAFAF8
@@ -237,7 +238,7 @@ header
 			border-radius: 0px 0px 10px 10px
 			margin-bottom: 40px
 			.vote_title_pic
-				background-color: #fff
+				background-color: #F5F5EB
 				img
 					width: 100%
 			.vote_content
@@ -253,6 +254,97 @@ header
 						padding-left: 25px
 						>*
 							+display-flex
+						.redfont
+							white-space: nowrap
+						.prizetable
+							margin-left: -25px
+						img
+							width: 100%
+					.intro
+						margin-bottom: 20px
+						.topcolumn
+							font-size: 16px
+							border: 1px solid #D7D7D7
+							.column
+								+display-flex
+								+align-items(center)
+								border-bottom: 1px solid #D7D7D7
+								&:nth-child(2)
+									border: 0
+								>*
+									height: 50px
+									line-height: 50px
+									text-align: center
+									
+								.title
+									background-color: #0071BB
+									width: 77px
+									margin: 0
+									color: #fff
+								.prizeintro
+									width: calc(100% - 77px)
+									background-color: #F5F5EB
+						.bottomcolumn
+							+display-flex
+							font-size: 14px
+							border: 1px solid #D7D7D7
+							border-top-width: 0px
+							.column
+								&:nth-child(1)
+									width: 77px
+									.title,.prizeintro
+										border-top-width: 0px
+										border-left-width: 0px
+									.prizeintro
+										padding: 0 10px
+								&:nth-child(2)
+									width: calc(100% - 77px)
+									.title,.prizeintro
+										border-top-width: 0px
+										border-left-width: 0px
+										border-right-width: 0px
+									.prizeintro
+										padding: 0 15px
+								.title
+									background-color: #0071BB
+									height: 50px
+									color: #fff
+									font-size: 16px
+									margin: 0
+									line-height: 50px
+									text-align: center
+									border: 1px solid #D7D7D7
+								.prizeintro
+									border: 1px solid #D7D7D7
+									line-height: 18px
+									+display-flex
+									+justify-content(space-around)
+									+align-items(flex-start)
+									+flex-direction(column)
+									img
+										+align-self(center)
+									&:nth-child(2),&:nth-child(3),&:nth-child(4)
+										height: 95px
+									&:nth-child(5)
+										height: 320px
+									&:nth-child(6),&:nth-child(7)
+										height: 260px
+									&:nth-child(7)
+										border-bottom-width: 0px
+						&:nth-child(13)
+							.bottomcolumn
+								.column
+									.prizeintro
+										&:nth-child(2)
+											height: 95px
+										&:nth-child(3),&:nth-child(4)
+											height: 260px
+						&:nth-child(14)
+							.bottomcolumn
+								.column
+									.prizeintro
+										&:nth-child(2)
+											height: 240px
 					.redfont
 						color: #F27164
 					.btn_group
@@ -270,6 +362,7 @@ header
 								width: auto
 								height: 100%
 					.line
+						margin-bottom: 20px
 						img
 							width: 100%
 				.vote_photo_list
@@ -867,7 +960,6 @@ footer
 					width: 100%
 			.votearea,.electionarea,.activityarea
 				.vote_title_pic
-					background-color: #fff
 					img
 						width: 100%
 				.vote_content
@@ -876,6 +968,62 @@ footer
 						.btn_group
 							+justify-content(center)
 							+flex-direction(row)
+						.intro
+							.topcolumn
+								.column
+									.title
+										width: 131px
+									.prizeintro
+										width: calc(100% - 131px)
+							.bottomcolumn
+								.column
+									&:nth-child(1)
+										width: 131px
+										.title,.prizeintro
+											border-top-width: 0px
+											border-left-width: 0px
+										.prizeintro
+											padding: 0 10px
+									&:nth-child(2)
+										width: calc(100% - 131px)
+										.title,.prizeintro
+											border-top-width: 0px
+											border-left-width: 0px
+											border-right-width: 0px
+										.prizeintro
+											padding: 0 15px
+									.title
+										background-color: #0071BB
+										height: 50px
+										color: #fff
+										font-size: 16px
+										margin: 0
+										line-height: 50px
+										text-align: center
+										border: 1px solid #D7D7D7
+									.prizeintro
+										img
+											+align-self(center)
+										&:nth-child(2),&:nth-child(3),&:nth-child(4)
+											height: 70px
+										&:nth-child(5)
+											height: 260px
+										&:nth-child(6),&:nth-child(7)
+											height: 240px
+							&:nth-child(13)
+								.bottomcolumn
+									.column
+										.prizeintro
+											&:nth-child(2)
+												height: 70px
+											&:nth-child(3),&:nth-child(4)
+												height: 240px
+							&:nth-child(14)
+								.bottomcolumn
+									.column
+										.prizeintro
+											&:nth-child(2)
+												height: 220px
 					.vote_photo_list
 						.line
 							margin-bottom: 20px
@@ -1241,16 +1389,103 @@ footer
 				max-width: 940px
 				margin: 0px auto 40px
 				.vote_title_pic
-					background-color: #fff
 					img
 						width: 100%
 				.vote_content
 					padding: 20px 30px
 					.description
-
 						.btn_group
 							+justify-content(center)
 							+flex-direction(row)
+						.intro
+							+display-flex
+							.topcolumn
+								+display-flex
+								.column
+									+display-flex
+									+align-items(center)
+									+flex-direction(column)
+									border-bottom: 1px solid #D7D7D7
+									&:nth-child(2)
+										border: 0
+									>*
+										height: 50px
+										line-height: 50px
+										text-align: center
+										
+									.title
+										background-color: #0071BB
+										width: 77px
+										margin: 0
+										color: #fff
+									.prizeintro
+										width: 100%
+										height: 100%
+										background-color: #F5F5EB
+										+display-flex
+										+align-items(center)
+										+justify-content(center)
+							.bottomcolumn
+								+display-flex
+								font-size: 14px
+								border: 1px solid #D7D7D7
+								border-top-width: 0px
+								.column
+									&:nth-child(1)
+										width: 77px
+										.title,.prizeintro
+											border-top-width: 0px
+											border-left-width: 0px
+										.prizeintro
+											padding: 0 10px
+									&:nth-child(2)
+										width: calc(100% - 77px)
+										.title,.prizeintro
+											border-top-width: 0px
+											border-left-width: 0px
+											border-right-width: 0px
+										.prizeintro
+											padding: 0 15px
+									.title
+										background-color: #0071BB
+										height: 50px
+										color: #fff
+										font-size: 16px
+										margin: 0
+										line-height: 50px
+										text-align: center
+										border: 1px solid #D7D7D7
+									.prizeintro
+										border: 1px solid #D7D7D7
+										line-height: 18px
+										+display-flex
+										+justify-content(space-around)
+										+align-items(flex-start)
+										+flex-direction(column)
+										img
+											+align-self(center)
+										&:nth-child(2),&:nth-child(3),&:nth-child(4)
+											height: 95px
+										&:nth-child(5)
+											height: 320px
+										&:nth-child(6),&:nth-child(7)
+											height: 260px
+										&:nth-child(7)
+											border-bottom-width: 0px
+							&:nth-child(13)
+								.bottomcolumn
+									.column
+										.prizeintro
+											&:nth-child(2)
+												height: 95px
+											&:nth-child(3),&:nth-child(4)
+												height: 260px
+							&:nth-child(14)
+								.bottomcolumn
+									.column
+										.prizeintro
+											&:nth-child(2)
+												height: 240px
 					.vote_photo_list
 						.line
 							margin-bottom: 20px
