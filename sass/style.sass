@@ -232,7 +232,7 @@ header
 			margin-top: 15px
 			img
 				width: 100%
-		.votearea,.electionarea,.activityarea
+		.votearea,.electionarea,.activityarea,.contactarea
 			background-color: #FFD41D
 			overflow: hidden
 			border-radius: 0px 0px 10px 10px
@@ -258,8 +258,59 @@ header
 							white-space: nowrap
 						.prizetable
 							margin-left: -25px
+						.breakline
+							display: block
+							
 						img
 							width: 100%
+					.form_group
+						.input_group
+							+display-flex
+							+align-items(center)
+							margin-bottom: 15px
+							.inputarea
+								width: calc(100% - 73.75px)
+								+display-flex
+								+align-items(center)
+								.name
+									font-size: 16px
+								input
+									border-radius: 3px
+									background-color: #F5F5EB
+									border: 1px solid #DDDDDD
+									width: 100%
+									height: 35px
+								::-webkit-input-placeholder
+
+									color: #FFFFFF
+
+								::-moz-placeholder
+									color: #FFFFFF
+									opacity: 1
+
+								::-moz-placeholder
+									color: #FFFFFF
+									opacity: 1
+
+								::-ms-input-placeholder
+									color: #FFFFFF
+						.textarea
+							+align-items(flex-start)
+							textarea
+								border-radius: 3px
+								background-color: #F5F5EB
+								border: 1px solid #DDDDDD
+								width: 100%
+						.tip
+							color: #F27164
+						.btn_group
+							+display-flex
+							+justify-content(space-around)
+							padding: 0
+							width: 100%
+							+flex-direction(row)
+							>*
+								cursor: pointer
 					.intro
 						margin-bottom: 20px
 						.topcolumn
@@ -271,6 +322,8 @@ header
 								border-bottom: 1px solid #D7D7D7
 								&:nth-child(2)
 									border: 0
+									.prizeintro
+										background-color: #FAFAF8
 								>*
 									height: 50px
 									line-height: 50px
@@ -297,6 +350,7 @@ header
 										border-left-width: 0px
 									.prizeintro
 										padding: 0 10px
+										background-color: #FAFAF8
 								&:nth-child(2)
 									width: calc(100% - 77px)
 									.title,.prizeintro
@@ -305,6 +359,8 @@ header
 										border-right-width: 0px
 									.prizeintro
 										padding: 0 15px
+								&:nth-child(3)
+									display: none
 								.title
 									background-color: #0071BB
 									height: 50px
@@ -723,6 +779,8 @@ header
 			background-color: #5DB3F4
 		.activityarea
 			background-color: #89D80E
+		.contactarea
+			background-color: #F27164
 
 
 
@@ -958,16 +1016,44 @@ footer
 				margin-top: 15px
 				img
 					width: 100%
-			.votearea,.electionarea,.activityarea
+			.votearea,.electionarea,.activityarea,.contactarea
 				.vote_title_pic
 					img
 						width: 100%
 				.vote_content
-					margin: 0 14px 5px
+					margin: 0 14px 14px
 					.description
 						.btn_group
 							+justify-content(center)
 							+flex-direction(row)
+						p
+							.breakline
+								display: none
+						.form_group
+							.input_group
+								+display-flex
+								+align-items(center)
+								margin-bottom: 15px
+								.inputarea
+									+display-flex
+									+align-items(center)
+									.name
+										font-size: 16px
+									input
+										width: 284px
+
+							.textarea
+								+align-items(flex-start)
+								textarea
+									max-width: 510px
+							.btn_group
+								+display-flex
+								+justify-content(space-around)
+								padding: 0
+								width: 100%
+								+flex-direction(row)
+								>*
+									cursor: pointer
 						.intro
 							.topcolumn
 								.column
@@ -1385,7 +1471,7 @@ footer
 				max-width: 940px
 				img
 					width: 100%
-			.votearea,.electionarea,.activityarea
+			.votearea,.electionarea,.activityarea,.contactarea
 				max-width: 940px
 				margin: 0px auto 40px
 				.vote_title_pic
@@ -1401,13 +1487,19 @@ footer
 							+display-flex
 							.topcolumn
 								+display-flex
+
 								.column
 									+display-flex
 									+align-items(center)
 									+flex-direction(column)
-									border-bottom: 1px solid #D7D7D7
+									border-right: 1px solid #D7D7D7
+									border-bottom-width: 0px
+									width: 125px
 									&:nth-child(2)
 										border: 0
+										width: 62px
+										.title
+											width: 62px
 									>*
 										height: 50px
 										line-height: 50px
@@ -1415,9 +1507,10 @@ footer
 										
 									.title
 										background-color: #0071BB
-										width: 77px
+										width: 125px
 										margin: 0
 										color: #fff
+										border-bottom: 1px solid #D7D7D7
 									.prizeintro
 										width: 100%
 										height: 100%
@@ -1427,25 +1520,35 @@ footer
 										+justify-content(center)
 							.bottomcolumn
 								+display-flex
-								font-size: 14px
-								border: 1px solid #D7D7D7
-								border-top-width: 0px
+								border-top-width: 1px
+								border-left-width: 0px
+								width: calc(100% - 189px)
 								.column
 									&:nth-child(1)
-										width: 77px
+										width: 168px
 										.title,.prizeintro
 											border-top-width: 0px
 											border-left-width: 0px
 										.prizeintro
 											padding: 0 10px
 									&:nth-child(2)
-										width: calc(100% - 77px)
+										width: 269px
 										.title,.prizeintro
 											border-top-width: 0px
 											border-left-width: 0px
 											border-right-width: 0px
 										.prizeintro
 											padding: 0 15px
+											img
+												display: none
+									&:nth-child(3)
+										width: calc(100% - 437px)
+										.title,.prizeintro
+											border-top-width: 0px
+											border-right-width: 0px
+											// border-bottom-width: 0px
+
+												
 									.title
 										background-color: #0071BB
 										height: 50px
@@ -1465,11 +1568,9 @@ footer
 										img
 											+align-self(center)
 										&:nth-child(2),&:nth-child(3),&:nth-child(4)
-											height: 95px
-										&:nth-child(5)
-											height: 320px
-										&:nth-child(6),&:nth-child(7)
-											height: 260px
+											height: 48px
+										&:nth-child(5),&:nth-child(6),&:nth-child(7)
+											height: 157px
 										&:nth-child(7)
 											border-bottom-width: 0px
 							&:nth-child(13)
@@ -1477,15 +1578,18 @@ footer
 									.column
 										.prizeintro
 											&:nth-child(2)
-												height: 95px
+												height: 48px
 											&:nth-child(3),&:nth-child(4)
-												height: 260px
+												height: 157px
+											&:nth-child(4)
+												border-bottom-width: 0
 							&:nth-child(14)
 								.bottomcolumn
 									.column
 										.prizeintro
 											&:nth-child(2)
-												height: 240px
+												height: 157px
+												border-bottom-width: 0
 					.vote_photo_list
 						.line
 							margin-bottom: 20px
