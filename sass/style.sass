@@ -1,11 +1,103 @@
 @import "compass/css3"
 
-header
-	.top
-		img
-			display: block
+
+*
+	position: relative
+input
+	padding-left: 5px
+.bg01,.bg02,.bg03,.bg04,.bg05,.bg06
+	position: absolute
+img[src="images/vote_info_description.png"]
+	display: none
+
+.wrap
+	position: relative
+	overflow: hidden
+	
+	.popwindow
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100vh
+		z-index: 999
+		display: none
+		
+		.layout
 			width: 100%
-			height: 12px
+			height: 100%
+			background-color: rgba(0,0,0,0.6)
+		.prize_intro
+			position: absolute
+			left: 50%
+			top: 50%
+			-webkit-transform: translate(-50%, -50%)
+			-moz-transform: translate(-50%, -50%)
+			-ms-transform: translate(-50%, -50%)
+			-o-transform: translate(-50%, -50%)
+			transform: translate(-50%, -50%)
+			width: 100%
+			background-color: #fff
+			+display-flex
+			+align-items(center)
+			+flex-direction(column)
+			padding: 40px 35px
+			&:before,&:after
+				content: ""
+				width: 31px
+				height: 6px
+				background-color: #F27164
+				border-radius: 3px
+				position: absolute
+				top: 10px
+				right: 10px
+				-webkit-transform: rotate(45deg)
+				-moz-transform: rotate(45deg)
+				-ms-transform: rotate(45deg)
+				-o-transform: rotate(45deg)
+				transform: rotate(45deg)
+				margin-top: 10px
+				cursor: pointer
+			&:after
+				-webkit-transform: rotate(-45deg)
+				-moz-transform: rotate(-45deg)
+				-ms-transform: rotate(-45deg)
+				-o-transform: rotate(-45deg)
+				transform: rotate(-45deg)
+				
+			img
+				margin-bottom: 55px
+				width: 100%
+				height: 100%
+			.intro
+				width: 100%
+				.title
+					font-size: 16px
+					padding-bottom: 10px
+					border-bottom: 1px solid #473729
+					margin-bottom: 10px
+				.intro_content
+					font-size: 14px
+	.bg
+		position: absolute
+		top: 0
+		left: 0
+		background-image: url(../images/bg03.png),url(../images/bg01.png),url(../images/bg02.png),url(../images/bg04.png),url(../images/bg06.png),url(../images/bg05.png)
+		background-repeat: no-repeat,no-repeat,no-repeat
+		background-position: 0% 0%,130% 15%,-10% 30%,105% 50%,0% 70%,135% 100%
+		width: 100%
+		height: 100%
+		z-index: 99
+			
+
+header
+	z-index: 999
+	background-color: #fff
+	.top
+		height: 12px
+		background-image: url(../images/topline.jpg)
+		background-repeat: repeat-x
+		
 		
 	.bottom
 		+display-flex
@@ -14,7 +106,9 @@ header
 		position: relative
 		height: 60px
 		padding: 0 20px
-		// .logo
+		.logo
+			img
+				height: 40px
 		// .menubtn
 		.menu
 			position: absolute
@@ -34,59 +128,95 @@ header
 						background-color: #89D80E
 						a
 							&:before
-								content: url(../images/menu_icon01.png)
+								content: ""
+								background-image: url(../images/menu_icon01.png)
+								
+								
 					&:nth-child(2)
 						background-color: #5DB3F4
 						a
 							&:before
-								content: url(../images/menu_icon02.png)
+								content: ""
+								background-image: url(../images/menu_icon02.png)
+								
 					&:nth-child(3)
 						background-color: #FFD41D
 						a
 							&:before
-								content: url(../images/menu_icon03.png)
+								content: ""
+								background-image: url(../images/menu_icon03.png)
+								
 					&:nth-child(4)
 						background-color: #F27164
 						a
 							&:before
-								content: url(../images/menu_icon04.png)
+								content: ""
+								background-image: url(../images/menu_icon04.png)
+								
 					&:nth-child(5)
 						background-color: #EF8A45
 						a
 							&:before
-								content: url(../images/menu_icon05.png)
+								content: ""
+								background-image: url(../images/menu_icon05.png)
+								
 					&:nth-child(6)
 						background-color: #328DC6
 						border-bottom: 8px solid #fff
 						a
 							color: #fff
 							&:before
-								content: url(../images/menu_icon06.png)
+								content: ""
+								background-image: url(../images/menu_icon06.png)
+								
 							
 					a
 						color: #000
 						height: 54px
-						font-size: 13px
+						font-size: 14px
 						width: 100%
 						+display-flex
 						+justify-content(center)
 						+align-items(center)
 						&:before
 							margin-right: 10px
+							background-size: contain
+							background-repeat: no-repeat
+							width: 30px
+							height: 30px
+							
 
 .content
 	background-color: #F5F5EB
 	.container-fluid
+		
 		.slider_area
-			background-color: #FAFAF8
-			margin: 0 -15px 5px
-			padding: 10px 15px
+			margin: 10px 0px 15px
+			z-index: 99
+			.bg01
+				top: -40%
+				left: -30%
+			.bg02
+				top: 10%
+				right: -20%
+			.bg03
+				top: 10%
+				left: 10%
+			.bg04
+				top: 705%
+				left: -30%
+			.bg05
+				top: 865%
+				right: -30%
+			.bg06
+				top: 300%
+				right: -25%
 			.slider
 				img
 					width: 100%
 		.activity
 			text-align: center
-			
+			z-index: 99
 			ul
 				li
 					border-radius: 10px
@@ -122,10 +252,13 @@ header
 						position: absolute
 						left: 50%
 						+transform(translate(-50%,-50%))
+						img
+							width: 59px
 		.announcementarea
 			background-image: url(../images/announcement_bg.jpg)
 			margin: 0 -15px
 			padding: 15px 25px
+			z-index: 99
 			.announcement
 				.leftcolumn
 					display: none
@@ -146,6 +279,7 @@ header
 			padding: 20px 15px
 			margin: 0 -15px
 			background-image: url(../images/photo_bg.jpg)
+			z-index: 99
 			.topcolumn
 				.searcharea
 					+display-flex
@@ -163,7 +297,8 @@ header
 							background-color: rgba(256,256,256, 0.3)
 							font-size: 14px
 							height: 36px
-							min-width: 245px
+							// min-width: 245px
+							padding-left: 5px
 						::-webkit-input-placeholder
 
 							color: #FFFFFF
@@ -180,13 +315,15 @@ header
 							color: #FFFFFF
 					a
 						img
-							width: 100%
+							width: auto
+							height: 50px
 				.new_photo
 					text-align: center
 					
 					a
 						img
 							margin-bottom: 20px
+							height: 50px
 			.photo_list
 				text-align: center
 
@@ -215,7 +352,7 @@ header
 								width: 100%
 						.info
 							color: #0071BB
-							font-size: 12px
+							font-size: 14px
 							padding: 8px 10px
 							background-color: #fff
 							+display-flex
@@ -226,21 +363,32 @@ header
 								.heart
 									img
 										display: block
+										width: 18px
 					.more_btn
 						margin: 10px auto 10px
+						img
+							width: 69px
 		.remarks
 			margin-top: 15px
 			img
 				width: 100%
-		.votearea,.electionarea,.activityarea,.contactarea
-			background-color: #FFD41D
+			img[src*=remark_pic_desktop]
+				display: none
+			img[src*=remark_pic_table]
+				display: none
+		.votearea,.electionarea,.activityarea,.contactarea,.prizearea
 			overflow: hidden
 			border-radius: 0px 0px 10px 10px
+			margin-top: 10px
 			margin-bottom: 40px
+			z-index: 99
 			.vote_title_pic
-				background-color: #F5F5EB
 				img
 					width: 100%
+			.vote_bg
+				background-color: #FFD41D
+				overflow: hidden
+				
 			.vote_content
 				margin: 0 5px 5px
 				border-radius: 10px
@@ -248,8 +396,11 @@ header
 				padding: 15px 10px
 				.description
 					padding: 5px 10px 0px
+					font-size: 16px
 					.title
 						margin-bottom: 10px
+						img
+							height: 27px
 					p
 						padding-left: 25px
 						>*
@@ -263,13 +414,17 @@ header
 							
 						img
 							width: 100%
+							height: 100%
+						img[src*=activity_prize_table]
+							display: none
+
 					.form_group
 						.input_group
 							+display-flex
 							+align-items(center)
 							margin-bottom: 15px
 							.inputarea
-								width: calc(100% - 73.75px)
+								width: calc(100% - 74px)
 								+display-flex
 								+align-items(center)
 								.name
@@ -280,6 +435,7 @@ header
 									border: 1px solid #DDDDDD
 									width: 100%
 									height: 35px
+									padding-left: 5px
 								::-webkit-input-placeholder
 
 									color: #FFFFFF
@@ -294,6 +450,8 @@ header
 
 								::-ms-input-placeholder
 									color: #FFFFFF
+							.name
+								white-space: nowrap
 						.textarea
 							+align-items(flex-start)
 							textarea
@@ -301,6 +459,7 @@ header
 								background-color: #F5F5EB
 								border: 1px solid #DDDDDD
 								width: 100%
+								padding-left: 5px
 						.tip
 							color: #F27164
 						.btn_group
@@ -311,6 +470,8 @@ header
 							+flex-direction(row)
 							>*
 								cursor: pointer
+								img
+									height: 40px
 					.intro
 						margin-bottom: 20px
 						.topcolumn
@@ -361,6 +522,10 @@ header
 										padding: 0 15px
 								&:nth-child(3)
 									display: none
+									.prizeintro
+										span
+											display: none
+											
 								.title
 									background-color: #0071BB
 									height: 50px
@@ -379,6 +544,9 @@ header
 									+flex-direction(column)
 									img
 										+align-self(center)
+										cursor: pointer
+										max-width: 192px
+										width: 100%
 									&:nth-child(2),&:nth-child(3),&:nth-child(4)
 										height: 95px
 									&:nth-child(5)
@@ -419,13 +587,13 @@ header
 								height: 100%
 					.line
 						margin-bottom: 20px
-						img
-							width: 100%
+						overflow: hidden
 				.vote_photo_list
 					.line
 						margin-bottom: 20px
-						img
-							width: 100%
+						overflow: hidden
+						
+
 					.topcolumn
 						.searcharea
 							+display-flex
@@ -443,7 +611,8 @@ header
 									background-color: rgba(256,256,256, 0.3)
 									font-size: 14px
 									height: 36px
-									min-width: 245px
+									// min-width: 245px
+									padding-left: 5px
 								::-webkit-input-placeholder
 
 									color: #FFFFFF
@@ -461,6 +630,7 @@ header
 							a
 								img
 									width: 100%
+									max-height: 50px
 						.arrangement
 							+display-flex
 							+justify-content(space-around)
@@ -489,18 +659,26 @@ header
 								width: calc(50% - 5px)
 								box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2)
 								margin-bottom: 10px
+								border-top: 6px solid #89D80E
 								&:nth-child(odd)
 									margin-right: 5px
 								&:nth-child(even)
 									margin-left: 5px
-								&:nth-child(4n+1)
-									border-top: 6px solid #89D80E
-								&:nth-child(4n+2)
+								// &:nth-child(4n+1)
+								// 	border-top: 6px solid #89D80E
+								// &:nth-child(4n+2)
+								// 	border-top: 6px solid #5DB3F4
+								// &:nth-child(4n+3)
+								// 	border-top: 6px solid #FFD41D
+								// &:nth-child(4n+4)
+								// 	border-top: 6px solid #F27164
+								&:nth-child(5),&:nth-child(6),&:nth-child(7),&:nth-child(8)
 									border-top: 6px solid #5DB3F4
-								&:nth-child(4n+3)
+								&:nth-child(9),&:nth-child(10),&:nth-child(11),&:nth-child(12)
 									border-top: 6px solid #FFD41D
-								&:nth-child(4n+4)
+								&:nth-child(13),&:nth-child(14),&:nth-child(15),&:nth-child(16)
 									border-top: 6px solid #F27164
+
 								.pic
 									img
 										width: 100%
@@ -528,16 +706,25 @@ header
 										+justify-content(space-between)
 										.social
 											margin-right: 7px
+											width: 20px
+											&:last-child
+												margin: 0
+											img
+												width: 100%
 										.leftcolumn
 											+display-flex
+										.rightcolumn
+											img
+												height: 20px
 							.more_btn
 								margin: 10px auto 10px
 								width: 100%
+								img
+									width: 69px
 				.vote_info_area
 					.line
 						margin-bottom: 20px
-						img
-							width: 100%
+						overflow: hidden
 					.vote_info
 						padding: 0 10px
 						margin-bottom: 20px
@@ -555,9 +742,13 @@ header
 									+display-flex
 									.social
 										margin-right: 10px
+										img
+											width: 30px
 								.description
 									margin: 0
 									padding: 0
+									img
+										width: 100%
 							.bottomcolumn
 								+display-flex
 								+justify-content(space-between)
@@ -580,16 +771,20 @@ header
 								li
 									+display-flex
 									span
+										font-size: 16px
 										&:first-child
 											margin-right: 5px
 							.uploadbtn
 								text-align: center
 								cursor: pointer
+								img
+									height: 50px
 					.personal_info
 						.personal_info_pic
 							margin-bottom: 20px
+							img
+								height: 50px
 						.input_group
-
 							.name_area
 								font-size: 16px
 								+display-flex
@@ -603,12 +798,13 @@ header
 								+flex-wrap(wrap)
 								margin-bottom: 15px
 								input
-									min-width: 245px
+									// min-width: 245px
 									border-radius: 3px
 									background-color: #F5F5EB
 									border: 1px solid #DDDDDD
 									width: 100%
 									height: 35px
+									padding-left: 5px
 								::-webkit-input-placeholder
 
 									color: #FFFFFF
@@ -644,6 +840,10 @@ header
 
 
 					.form
+						.write_info_pic
+							margin-bottom: 20px
+							img
+								height: 50px
 						p
 							font-size: 16px
 							color: #F27164
@@ -678,6 +878,7 @@ header
 								margin-bottom: 10px
 								.name
 									font-size: 16px
+									white-space: nowrap
 								.input_tip
 									margin-left: 10px
 									width: calc(100% - 84px)
@@ -726,6 +927,8 @@ header
 								margin-bottom: 30px
 							.submit_btn
 								text-align: center
+								img
+									height: 50px
 							.mb30
 								margin-bottom: 30px
 							.mb20
@@ -771,17 +974,27 @@ header
 							.notic_items
 								.notic_items_pic
 									margin-bottom: 25px
+									img
+										height: 50px
 							.inline_btn
 								+display-flex
 								+justify-content(space-around)
+								margin-top: 20px
+								img
+									height: 40px
 
 		.electionarea
-			background-color: #5DB3F4
+			.vote_bg
+				background-color: #5DB3F4
 		.activityarea
-			background-color: #89D80E
+			.vote_bg
+				background-color: #89D80E
 		.contactarea
-			background-color: #F27164
-
+			.vote_bg
+				background-color: #F27164
+		.prizearea
+			.vote_bg
+				background-color: #ef8a45
 
 
 footer
@@ -789,105 +1002,357 @@ footer
 	color: #0071BB
 	text-align: center
 	padding-top: 15px
+	z-index: 99
 	.home
 		img
 			margin: auto
+			width: 28px
 	.copyright
 		padding: 15px 0
 		span
 			display: block
 			
 	.bottomcolumn
-		img
-			width: 100%
-			display: block
-			height: 12px
+		height: 5px
+		background-image: url(../images/topline.jpg)
+		background-repeat: repeat-x
 .desktop
 	display: none
 .moblie
 	display: block
 
+@media only screen and (max-width: 330px)
+	.content
+		background-color: #F5F5EB
+		.container-fluid
+			.votearea,.electionarea,.activityarea,.contactarea
+				.vote_content
+					.description
+						.btn_group
+							>*
+								+display-flex
+								margin-bottom: 13px
+
+							.vote_btn
+								margin-right: 8px
+								height: 30px
+								&:last-child
+									margin: 0
+						.intro
+							margin-bottom: 20px
+							.topcolumn
+								font-size: 16px
+								border: 1px solid #D7D7D7
+								.column
+									+display-flex
+									+align-items(center)
+									border-bottom: 1px solid #D7D7D7
+									&:nth-child(2)
+										border: 0
+										.prizeintro
+											background-color: #FAFAF8
+									>*
+										height: 50px
+										line-height: 50px
+										text-align: center
+										
+									.title
+										background-color: #0071BB
+										width: 77px
+										margin: 0
+										color: #fff
+									.prizeintro
+										width: calc(100% - 77px)
+										background-color: #F5F5EB
+							.bottomcolumn
+								+display-flex
+								font-size: 14px
+								border: 1px solid #D7D7D7
+								border-top-width: 0px
+								.column
+									&:nth-child(1)
+										width: 77px
+										.title,.prizeintro
+											border-top-width: 0px
+											border-left-width: 0px
+										.prizeintro
+											padding: 0 10px
+											background-color: #FAFAF8
+									&:nth-child(2)
+										width: calc(100% - 77px)
+										.title,.prizeintro
+											border-top-width: 0px
+											border-left-width: 0px
+											border-right-width: 0px
+										.prizeintro
+											padding: 0 15px
+									&:nth-child(3)
+										display: none
+										.prizeintro
+											span
+												display: none
+												
+									.title
+										background-color: #0071BB
+										height: 50px
+										color: #fff
+										font-size: 16px
+										margin: 0
+										line-height: 50px
+										text-align: center
+										border: 1px solid #D7D7D7
+									.prizeintro
+										border: 1px solid #D7D7D7
+										line-height: 18px
+										+display-flex
+										+justify-content(space-around)
+										+align-items(flex-start)
+										+flex-direction(column)
+										img
+											+align-self(center)
+											cursor: pointer
+											width: 100%
+										&:nth-child(2),&:nth-child(3),&:nth-child(4)
+											height: 95px
+										&:nth-child(5)
+											height: 350px
+										&:nth-child(6),&:nth-child(7)
+											height: 260px
+										&:nth-child(7)
+											border-bottom-width: 0px
+							&:nth-child(13)
+								.bottomcolumn
+									.column
+										.prizeintro
+											&:nth-child(2)
+												height: 95px
+											&:nth-child(3),&:nth-child(4)
+												height: 260px
+							&:nth-child(14)
+								.bottomcolumn
+									.column
+										.prizeintro
+											&:nth-child(2)
+												height: 240px
+					.vote_photo_list
+						.topcolumn
+							.searcharea
+								margin-bottom: 20px
+								.border
+									padding: 4px
+									background-color: #328DC6
+									display: inline-block
+									border-radius: 6px
+										
+						.photo_list
+							text-align: center
+
+							
+							.photoarea
+								+display-flex
+								+flex-wrap(wrap)
+								.photobox
+									width: calc(50% - 5px)
+									box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2)
+									margin-bottom: 10px
+									&:nth-child(odd)
+										margin-right: 5px
+									&:nth-child(even)
+										margin-left: 5px
+									&:nth-child(4n+1)
+										border-top: 6px solid #89D80E
+									&:nth-child(4n+2)
+										border-top: 6px solid #5DB3F4
+									&:nth-child(4n+3)
+										border-top: 6px solid #FFD41D
+									&:nth-child(4n+4)
+										border-top: 6px solid #F27164
+									.pic
+										img
+											width: 100%
+									.info
+										color: #0071BB
+										font-size: 12px
+										padding: 8px 5px
+										background-color: #fff
+										+display-flex
+										+justify-content(space-between)
+										.bottomcolumn
+											+display-flex
+											+align-items(flex-end)
+											.heart
+												img
+													display: block
+										
+									.column_direction
+										+flex-direction(column)
+										.topcolumn
+											>*
+												text-align: left
+										.bottomcolumn
+											+display-flex
+											+justify-content(space-between)
+											.social
+												margin-right: 7px
+												width: 19px
+												&:last-child
+													margin: 0
+												img
+													width: 100%
+											.leftcolumn
+												+display-flex
+					.vote_info_area
+						.form
+							.write_info_pic
+								margin-bottom: 20px
+							p
+								font-size: 16px
+								color: #F27164
+							.form_group
+								.input_group
+									+display-flex
+									+align-items(center)
+									margin-bottom: 30px
+									.name_area
+										font-size: 16px
+										white-space: nowrap
+										.tip
+											color: #F27164
+											font-size: 14px
+									.input_area
+										width: 100%
+										input
+											border-radius: 3px
+											background-color: #F5F5EB
+											border: 1px solid #DDDDDD
+											width: 100%
+											height: 25px
+										&:nth-child(2)
+											width: calc(100% - 16px)
+											margin: 0
+									&:nth-child(11)
+										+flex-direction(column)
+										+align-items(flex-start)
+									&:nth-child(12)
+										+flex-wrap(wrap)
+										.name_area
+											&:nth-child(1)
+												width: 100%
+										.input_area
+											width: 50px
+
 
 @media only screen and (min-width: 481px)
+	.wrap
+		.bg
+			background-position: 0% 0%,100% 20%,0% 30%,105% 50%,0% 60%,105% 70%
+			z-index: 99
+	
+		.popwindow
+			.prize_intro
+				max-width: 450px
+
 	header
-		.menubtn
-			display: none
-		.bottom
-			height: 113px
-			.menu
+		z-index: 999
+		background-color: #fff
+		.top
+			img
 				display: block
-				position: static
-				width: auto
+				width: 100%
+				height: 12px
+			
+		.bottom
+			+display-flex
+			+justify-content(space-between)
+			+align-items(center)
+			position: relative
+			height: 60px
+			padding: 0 20px
+			// .logo
+			// .menubtn
+			.menu
+				position: absolute
+				top: 100%
+				left: 0
+				width: 100%
+				display: none
+				z-index: 999
 				ul
-					+display-flex
-					margin: 0
+					text-align: center
+					
 					li
-						border: 0
-						margin-right: 30px
+						
+						border-bottom: 2px solid #fff
+						
 						&:nth-child(1)
-							background-color: transparent
+							background-color: #89D80E
 							a
 								&:before
-									content: url(../images/menu_icon01.png)
-									background-color: #89D80E
+									content: ""
 						&:nth-child(2)
-							background-color: transparent
+							background-color: #5DB3F4
 							a
 								&:before
-									content: url(../images/menu_icon02.png)
-									background-color: #5DB3F4
+									content: ""
 						&:nth-child(3)
-							background-color: transparent
+							background-color: #FFD41D
 							a
 								&:before
-									content: url(../images/menu_icon03.png)
-									background-color: #FFD41D
+									content: ""
 						&:nth-child(4)
-							background-color: transparent
+							background-color: #F27164
 							a
 								&:before
-									content: url(../images/menu_icon04.png)
-									background-color: #F27164
+									content: ""
 						&:nth-child(5)
-							background-color: transparent
+							background-color: #EF8A45
 							a
 								&:before
-									content: url(../images/menu_icon05.png)
-									background-color: #EF8A45
+									content: ""
 						&:nth-child(6)
-							background-color: transparent
-							border: 0
-							margin: 0
+							background-color: #328DC6
+							border-bottom: 8px solid #fff
 							a
 								color: #fff
-								
 								&:before
-									content: url(../images/menu_icon06.png)
-									background-color: #328DC6
-
+									content: ""
+								
 						a
+							color: #000
+							height: 54px
+							font-size: 16px
+							width: 100%
 							+display-flex
-							+flex-direction(column)
-							height: 100%
-							
+							+justify-content(center)
+							+align-items(center)
 							&:before
-								margin: 0
-								width: 50px
-								height: 50px
-								border-radius: 50%
-								+display-flex
-								+justify-content(center)
-								+align-items(center)
-								margin-bottom: 5px
-							span
-								color: #000
-								font-size: 12px
+								margin-right: 10px
+	
 	.content
 		.container-fluid
 			.slider_area
 				background-color: #FAFAF8
 				margin: 0 -15px 5px
 				padding: 10px 15px
+				z-index: 9
+				.bg01
+					top: 50%
+					left: -5%
+				.bg02
+					top: 10%
+					right: 3%
+				.bg03
+					top: 10%
+					left: 10%
+				.bg04
+					top: 260%
+					left: -10%
+				.bg05
+					top: 370%
+					right: 0%
+				.bg06
+					top: 90%
+					right: 5%
 				.slider
 					img
 						width: 100%
@@ -912,7 +1377,7 @@ footer
 							height: 110px
 							line-height: 110px
 							color: #424242
-							font-size: 17px
+							font-size: 19px
 							display: block
 							&:hover
 								text-decoration: none
@@ -959,10 +1424,6 @@ footer
 						margin-bottom: 20px
 						.border
 							margin-right: 15px
-
-						a
-							img
-								width: 100%
 					.new_photo
 						text-align: center
 						
@@ -999,7 +1460,7 @@ footer
 									width: 100%
 							.info
 								color: #0071BB
-								font-size: 12px
+								font-size: 14px
 								padding: 8px 10px
 								background-color: #fff
 								+display-flex
@@ -1016,7 +1477,14 @@ footer
 				margin-top: 15px
 				img
 					width: 100%
-			.votearea,.electionarea,.activityarea,.contactarea
+				
+				img[src*=remark_pic]
+					display: none
+				img[src*=remark_pic_desktop]
+					display: none
+				img[src*=remark_pic_table]
+					display: block
+			.votearea,.electionarea,.activityarea,.contactarea,.prizearea
 				.vote_title_pic
 					img
 						width: 100%
@@ -1029,16 +1497,23 @@ footer
 						p
 							.breakline
 								display: none
+						.title
+							img
+								height: 30px
 						.form_group
 							.input_group
 								+display-flex
 								+align-items(center)
 								margin-bottom: 15px
+								.name
+									font-size: 16px
+									white-space: nowrap
 								.inputarea
 									+display-flex
 									+align-items(center)
 									.name
 										font-size: 16px
+										white-space: nowrap
 									input
 										width: 284px
 
@@ -1109,7 +1584,7 @@ footer
 									.column
 										.prizeintro
 											&:nth-child(2)
-												height: 220px
+												height: 250px
 					.vote_photo_list
 						.line
 							margin-bottom: 20px
@@ -1143,9 +1618,6 @@ footer
 
 									::-ms-input-placeholder
 										color: #FFFFFF
-								a
-									img
-										width: 100%
 							.arrangement
 								+display-flex
 								+justify-content(space-around)
@@ -1175,17 +1647,24 @@ footer
 									width: calc((100% - 37px) / 2)
 									box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2)
 									margin-bottom: 10px
+									border-top: 6px solid #89D80E
 									&:nth-child(odd)
 										margin-right: calc(37px / 2)
 									&:nth-child(even)
 										margin-left: calc(37px / 2)
-									&:nth-child(1)
-										border-top: 6px solid #89D80E
-									&:nth-child(2)
+									// &:nth-child(1)
+									// 	border-top: 6px solid #89D80E
+									// &:nth-child(2)
+									// 	border-top: 6px solid #5DB3F4
+									// &:nth-child(3)
+									// 	border-top: 6px solid #FFD41D
+									// &:nth-child(4)
+									// 	border-top: 6px solid #F27164
+									&:nth-child(5),&:nth-child(6),&:nth-child(7),&:nth-child(8)
 										border-top: 6px solid #5DB3F4
-									&:nth-child(3)
+									&:nth-child(9),&:nth-child(10),&:nth-child(11),&:nth-child(12)
 										border-top: 6px solid #FFD41D
-									&:nth-child(4)
+									&:nth-child(13),&:nth-child(14),&:nth-child(15),&:nth-child(16)
 										border-top: 6px solid #F27164
 									.pic
 										img
@@ -1214,8 +1693,12 @@ footer
 											+justify-content(space-between)
 											.social
 												margin-right: 7px
+												width: 25px
 											.leftcolumn
 												+display-flex
+											.rightcolumn
+												img
+													height: 25px
 								.more_btn
 									margin: 10px auto 10px
 					.vote_info_area
@@ -1266,27 +1749,67 @@ footer
 								.uploadbtn
 									text-align: left
 						.personal_info
-							+display-flex
-							+flex-wrap(wrap)
+							display: block
+							
+							.singlecolumn
+								display: inline
+								&:after
+									content: ""
+									clear: both
+								&:nth-child(2)
+									.input_group
+										&:nth-child(2)
+											float: left
+											width: 50%
+											input
+												max-width: 150px
+												width: 100%
+								&:nth-child(3)
+									.input_group
+										float: left
+										width: 50%
+										input
+											max-width: 150px
+											width: 100%
+										&:nth-child(2)
+											input
+												width: 95px
+								&:nth-child(4)
+									.input_group
+										float: left
+										width: 50%
+										input
+											max-width: 150px
+											width: 100%
+
 							.input_group
 								+display-flex
 								+align-items(baseline)
 								width: 100%
+								.name_area
+									.name
+										white-space: nowrap
 								.input_area
+									width: 100%
 									.tip
 										color: #F27164
 										font-size: 14px
-										input
-											min-width: none
-								&:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6),&:nth-child(7),&:nth-child(8)
-									width: 50%
+										width: 100%
+									input
+										min-width: initial
+										max-width: 300px
+										width: 100%
+									select
+										width: 133px
+								&:nth-child(5),&:nth-child(6)
+									width: 100%
 									.name_area
 										.name
 											white-space: nowrap
 									.input_area
+										width: 100%
 										input
-											min-width: 150px
-											max-width: 150px
+											width: 100%
 										.tip
 											width: 100%
 						.form
@@ -1373,14 +1896,128 @@ footer
 				
 
 @media only screen and (min-width: 768px)
+	.wrap
+		.bg
+			background-position: 10% 10%,100% 20%,0% 30%,90% 50%,10% 60%,95% 70%
+			z-index: 99
+	img[src="images/lineicon_mo.png"]
+		display: none
+	img[src="images/fbicon.png"]
+		display: block
+	img[src="images/vote_info_description.png"]
+		display: block
+	img[src="images/vote_info_description_mo.png"]
+		display: none
+		
 	header
+		.menubtn
+			display: none
+		.bottom
+			height: 113px
+			.menu
+				display: block
+				position: static
+				width: auto
+				ul
+					+display-flex
+					margin: 0
+					li
+						border: 0
+						margin-right: 30px
+						&:nth-child(1)
+							background-color: transparent
+							a
+								&:before
+									content: url(../images/menu_icon_desktop01.png)
+									background-color: #89D80E
+						&:nth-child(2)
+							background-color: transparent
+							a
+								&:before
+									content: url(../images/menu_icon_desktop02.png)
+									background-color: #5DB3F4
+						&:nth-child(3)
+							background-color: transparent
+							a
+								&:before
+									content: url(../images/menu_icon_desktop03.png)
+									background-color: #FFD41D
+						&:nth-child(4)
+							background-color: transparent
+							a
+								&:before
+									content: url(../images/menu_icon_desktop04.png)
+									background-color: #F27164
+						&:nth-child(5)
+							background-color: transparent
+							a
+								&:before
+									content: url(../images/menu_icon_desktop05.png)
+									background-color: #EF8A45
+						&:nth-child(6)
+							background-color: transparent
+							border: 0
+							margin: 0
+							a
+								color: #fff
+								
+								&:before
+									content: url(../images/menu_icon_desktop06.png)
+									background-color: #328DC6
+
+						a
+							+display-flex
+							+flex-direction(column)
+							height: 100%
+							
+							&:before
+								margin: 0
+								width: 50px
+								height: 50px
+								border-radius: 50%
+								+display-flex
+								+justify-content(center)
+								+align-items(center)
+								margin-bottom: 5px
+							span
+								color: #000
+								font-size: 16px
+	header
+		.top
+			background-image: url(../images/topline_desktop.jpg)
 		.bottom
 			height: 113px
 			max-width: 940px
 			margin: auto
+			.logo
+				img
+					width: 162px
+					height: auto
+					
 	.content
 		.container-fluid
 			.slider_area
+				position: relative
+				.bg01
+					top: 50%
+					left: -5%
+				.bg02
+					top: 10%
+					right: 3%
+				.bg03
+					top: 10%
+					left: 10%
+				.bg04
+					top: 265%
+					left: -15%
+				.bg05
+					top: 368%
+					right: -5%
+				.bg06
+					top: 90%
+					right: 5%
+
+
 				.slider
 					max-width: 940px
 					margin: auto
@@ -1410,9 +2047,6 @@ footer
 						.border
 							margin-right: 15px
 
-						a
-							img
-								width: 100%
 					.new_photo
 						text-align: center
 						
@@ -1449,7 +2083,7 @@ footer
 									width: 100%
 							.info
 								color: #0071BB
-								font-size: 12px
+								font-size: 14px
 								padding: 8px 10px
 								background-color: #fff
 								+display-flex
@@ -1471,9 +2105,14 @@ footer
 				max-width: 940px
 				img
 					width: 100%
-			.votearea,.electionarea,.activityarea,.contactarea
+				img[src*=remark_pic_desktop]
+					display: block
+				img[src*=remark_pic_table]
+					display: none
+			.votearea,.electionarea,.activityarea,.contactarea,.prizearea
 				max-width: 940px
 				margin: 0px auto 40px
+				margin-top: 10px
 				.vote_title_pic
 					img
 						width: 100%
@@ -1483,6 +2122,15 @@ footer
 						.btn_group
 							+justify-content(center)
 							+flex-direction(row)
+							.vote_btn
+								height: 50px
+								width: 140px
+						p
+							.prizetable
+								img[src*=activity_prize]
+									display: none
+								img[src*=activity_prize_table]
+									display: block
 						.intro
 							+display-flex
 							.topcolumn
@@ -1513,7 +2161,7 @@ footer
 										border-bottom: 1px solid #D7D7D7
 									.prizeintro
 										width: 100%
-										height: 100%
+										height: calc(100% - 50px)
 										background-color: #F5F5EB
 										+display-flex
 										+align-items(center)
@@ -1543,6 +2191,8 @@ footer
 												display: none
 									&:nth-child(3)
 										width: calc(100% - 437px)
+										display: block
+										
 										.title,.prizeintro
 											border-top-width: 0px
 											border-right-width: 0px
@@ -1562,11 +2212,13 @@ footer
 										border: 1px solid #D7D7D7
 										line-height: 18px
 										+display-flex
-										+justify-content(space-around)
-										+align-items(flex-start)
-										+flex-direction(column)
+										+justify-content(center)
+										+align-items(center)
+										+flex-direction(row)
+
 										img
 											+align-self(center)
+											max-width: 130px
 										&:nth-child(2),&:nth-child(3),&:nth-child(4)
 											height: 48px
 										&:nth-child(5),&:nth-child(6),&:nth-child(7)
@@ -1590,6 +2242,12 @@ footer
 											&:nth-child(2)
 												height: 157px
 												border-bottom-width: 0
+						.form_group
+							.input_group
+								.btn_group
+									>*
+										img
+											height: 50px
 					.vote_photo_list
 						.line
 							margin-bottom: 20px
@@ -1635,16 +2293,22 @@ footer
 									&:nth-child(even)
 										margin-left: 0px
 										margin-right: 12px
-									&:nth-child(1)
-										border-top: 6px solid #89D80E
-									&:nth-child(2)
-										border-top: 6px solid #5DB3F4
-									&:nth-child(3)
-										border-top: 6px solid #FFD41D
-									&:nth-child(4)
-										border-top: 6px solid #F27164
+									// &:nth-child(1)
+									// 	border-top: 6px solid #89D80E
+									// &:nth-child(2)
+									// 	border-top: 6px solid #5DB3F4
+									// &:nth-child(3)
+									// 	border-top: 6px solid #FFD41D
+									// &:nth-child(4)
+									// 	border-top: 6px solid #F27164
 									&:nth-child(4n)
 										margin-right: 0
+									&:nth-child(5),&:nth-child(6),&:nth-child(7),&:nth-child(8)
+										border-top: 6px solid #5DB3F4
+									&:nth-child(9),&:nth-child(10),&:nth-child(11),&:nth-child(12)
+										border-top: 6px solid #FFD41D
+									&:nth-child(13),&:nth-child(14),&:nth-child(15),&:nth-child(16)
+										border-top: 6px solid #F27164
 									.pic
 										img
 											width: 100%
@@ -1667,6 +2331,7 @@ footer
 										.topcolumn
 											>*
 												text-align: left
+												font-size: 14px
 										.bottomcolumn
 											+display-flex
 											+justify-content(space-between)
@@ -1694,7 +2359,7 @@ footer
 									width: 100%
 							.vote_info_share
 								.topcolumn
-									+align-items(baseline)
+									+align-items(flex-start)
 									+flex-direction(row)
 									margin-bottom: 0px
 									height: (100%/3)
@@ -1712,26 +2377,29 @@ footer
 									.leftcolumn
 										font-size: 18px
 						.personal_info
-							padding: 0 50px
+							padding: 0
 							.singlecolumn
 								+display-flex
 								+justify-content(space-between)
 								width: 100%
 								.input_group
-									width: auto
+									width: 66.6%
 									+display-flex
 
 								&:nth-child(2)
 									.input_group
 										&:nth-child(1)
 											.input_area
-												width: 384px
+												max-width: 384px
+												width: 100%
 													
 										&:nth-child(2)
+											width: 33.3%
 											.input_area
 												width: 150px
 								&:nth-child(3)
 									.input_group
+										width: calc(100% / 3)
 										&:nth-child(1)
 											.input_area
 												width: 150px
@@ -1741,20 +2409,24 @@ footer
 										&:nth-child(3)
 											.input_area
 												width: 150px
+								&:nth-child(4)
+									+justify-content(flex-start)
+									.input_group
+										width: calc(100% / 3)
 							.input_group
 								.name_area
 									white-space: nowrap
 								&:nth-child(5),&:nth-child(6)
 									width: 100%
 									.input_area
+										width: calc(100% - 80px)
 										input
 											max-width: none
 											min-width: initial
 								.input_area
-									width: 100%
+									width: 150px
 									input
 										width: 100%
-										max-width: none
 										min-width: initial
 									.tip
 										white-space: nowrap
@@ -1775,11 +2447,11 @@ footer
 									span
 										color: #F27164
 								p
-									font-size: 12px
+									font-size: 14px
 									color: #473729
 								.checkbox
 									color: #473729
-									font-size: 14px
+									font-size: 16px
 									label
 										width: 100%
 									input[type~=text]
@@ -1832,6 +2504,9 @@ footer
 										.input_area
 											&:nth-child(2)
 												width: 130px
+								.inline_btn
+									img
+										height: 50px
 
 	footer
 		.topcolumn
@@ -1843,3 +2518,5 @@ footer
 			margin: auto
 			.home
 				margin: 0
+		.bottomcolumn
+			background-image: url(../images/topline_desktop.jpg)

@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Title Page</title>
+		<title>雪印明星2018月曆寶寶徵選活動</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/transformicons.css">
 		<!-- 最新編譯和最佳化的 CSS -->
@@ -24,16 +24,44 @@
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
+		<style>
+			.retinaDiv
+			{
+				width:160px; 
+				height:80px; 
+				background:url(logo.png) no-repeat;
+				clear:both; 
+				margin-bottom:10px;
+			}
+
+			/* Retina圖片CSS */
+			@media screen and (-webkit-min-device-pixel-ratio: 2),
+			screen and (min--moz-device-pixel-ratio: 2)
+			{
+			    .retinaDiv 
+				{
+			    	background: url(logo-2x.png);
+					background-size:160px 80px;
+			    }
+			}
+
+		</style>
+		
+		<script src="jquery.retina.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.retina').retina();
+			});
+		</script>
 	</head>
 	<body>
 		<div class="wrap">
+			<div class="bg"></div>
 			<header id="header" class="">
-				<div class="top">
-					<img src="images/topline.jpg" alt="">
-				</div>
+				<div class="top"></div>
 				<div class="bottom">
 					<div class="logo">
-						<a href="/">
+						<a href="index.html">
 							<img src="images/logo.png" alt="">
 						</a>
 					</div>
@@ -49,7 +77,7 @@
 							<li><a href="participate_election.html"><span>參加徵選</span></a></li>
 							<li><a href="vote.html"><span>我要投票</span></a></li>
 							<li><a href="contact.html"><span>聯絡雪印</span></a></li>
-							<li><a href="#"><span>得獎名單</span></a></li>
+							<li><a href="prizelist.html"><span>得獎名單</span></a></li>
 							<li><a href="#"><span>雪印官網</span></a></li>
 						</ul>
 					</div>
@@ -61,49 +89,51 @@
 						<div class="vote_title_pic">
 							<img src="images/activity_title_pic.png" alt="">
 						</div>
-						<div class="vote_content">
-							<div class="description">
-								<div class="btn_group">
-									<div class="topcolumn">
-										<div class="vote_btn"><a href="activity.html"><img src="images/vote_btn01.png" alt=""></a></div>
-										<div class="vote_btn"><a href="activity02.html"><img src="images/vote_btn02.png" alt=""></a></div>
+						<div class="vote_bg">
+							<div class="vote_content">
+								<div class="description">
+									<div class="btn_group">
+										<div class="topcolumn">
+											<div class="vote_btn"><a href="activity.html"><img src="images/vote_btn01.png" alt=""></a></div>
+											<div class="vote_btn"><a href="activity02.html"><img src="images/vote_btn02.png" alt=""></a></div>
+										</div>
+										<div class="bottomcolumn">
+											<div class="vote_btn"><a href="activity03.html"><img src="images/vote_btn03.png" alt=""></a></div>
+											<div class="vote_btn"><a href="activity04.html"><img src="images/vote_btn_active04.png" alt=""></a></div>
+										</div>
 									</div>
-									<div class="bottomcolumn">
-										<div class="vote_btn"><a href="activity03.html"><img src="images/vote_btn03.png" alt=""></a></div>
-										<div class="vote_btn"><a href="activity04.html"><img src="images/vote_btn_active04.png" alt=""></a></div>
+									<div class="line">
+										<img src="images/line.png" alt="">
 									</div>
+									<div class="title">
+										<img src="images/activity_title_pic13.png" alt="">
+									</div>
+									<p>
+										<span><span>1.</span><span>投票前須先以手機簡訊取得投票密碼，每隻門號活動期間僅限索取1次投票密碼，請自行保留投票密碼，遺失無法補發。僅限手持式行動電話或手機，家用電話或網路電話無法取得投票密碼。票選期間僅需申請一次密碼，之後以同一手機門號及對應的密碼每天可投一票!以上活動簡訊消費者都不需付費！</span></span>
+										<span><span>2.</span><span>可參與的電信公司：台灣六家電信月租型門號皆可使用，預付卡僅限遠傳與台哥大。</span></span>
+										<span><span>3.</span><span>索取密碼需先跟電信業者確認是否設定到拒收廣告簡訊及55123加值型簡訊的部份。</span></span>
+										<span><span>4.</span><span>為維護參加者權利，嚴禁駭客騷擾及有心人士不當灌票，一經發現查證屬實將取消投票資格及票數。</span></span>
+									</p>
+									<div class="title">
+										<img src="images/activity_title_pic14.png" alt="">
+									</div>
+									<p>
+										<span><span>1.</span><span>所有獎品以實物為準，不得折換現金或其他物品，本活動所有贈品因故無法提供，主辦單位有更換等值贈品之權利。</span></span>
+										<span><span>2.</span><span>若得獎者所提供的相關聯絡資料錯誤，主辦單位於名單公佈後十日內仍無法順利聯絡通知領獎事宜，以致失去獲獎資格，主辦單位將不另外進行遞補抽獎，若因地址不全或遷移而導致獎品退回、冒領、遺失，恕不另補發。</span></span>
+										<span><span>3.</span><span>凡機會中獎者，獎品價值超過新台幣1,001元(含)以上，主辦單位依稅法規定將於年底寄發扣繳憑單給中獎人。</span></span>
+										<span><span>4.</span><span>贈品寄送範圍僅限台澎金馬。</span></span>
+									</p>
+									<div class="title">
+										<img src="images/activity_title_pic15.png" alt="">
+									</div>
+									<p>
+										<span><span>1.</span><span>本活動獎項僅提供居住在中華民國台澎金馬地區之居民，獎品恕不郵寄至海外地區。</span></span>
+										<span><span>2.</span><span>若活動因故無法進行時，主辦單位得以保留修改取消變更本活動之權利。</span></span>
+										<span><span>3.</span><span>活動過程中若因不可抗拒之因素或電腦系統故障等因素，直接或間接導致主辦單位無法履行活動相關義務或造成參加活動時登錄資料之遺失或毀損，主辦單位不負任何法律責任。</span></span>
+										<span><span>4.</span><span>參加活動後即表示您同意主辦單位所規定之活動辦法，不得以任何理由或法律途徑提出抗議。</span></span>
+										<span><span>5.</span><span>參加活動即表示同意該資料作為獲獎通知的聯繫依據，並同意台灣雪印以所提供之email未來作為通知活動訊息與資訊溝通之用，不另做其他用途，主辦單位不會將該資料提供予第三人使用。 </span></span>
+									</p>
 								</div>
-								<div class="line">
-									<img src="images/line.png" alt="">
-								</div>
-								<div class="title">
-									<img src="images/activity_title_pic13.png" alt="">
-								</div>
-								<p>
-									<span><span>1.</span><span>投票前須先以手機簡訊取得投票密碼，每隻門號活動期間僅限索取1次投票密碼，請自行保留投票密碼，遺失無法補發。僅限手持式行動電話或手機，家用電話或網路電話無法取得投票密碼。票選期間僅需申請一次密碼，之後以同一手機門號及對應的密碼每天可投一票!以上活動簡訊消費者都不需付費！</span></span>
-									<span><span>2.</span><span>可參與的電信公司：台灣六家電信月租型門號皆可使用，預付卡僅限遠傳與台哥大。</span></span>
-									<span><span>3.</span><span>索取密碼需先跟電信業者確認是否設定到拒收廣告簡訊及55123加值型簡訊的部份。</span></span>
-									<span><span>4.</span><span>為維護參加者權利，嚴禁駭客騷擾及有心人士不當灌票，一經發現查證屬實將取消投票資格及票數。</span></span>
-								</p>
-								<div class="title">
-									<img src="images/activity_title_pic14.png" alt="">
-								</div>
-								<p>
-									<span><span>1.</span><span>所有獎品以實物為準，不得折換現金或其他物品，本活動所有贈品因故無法提供，主辦單位有更換等值贈品之權利。</span></span>
-									<span><span>2.</span><span>若得獎者所提供的相關聯絡資料錯誤，主辦單位於名單公佈後十日內仍無法順利聯絡通知領獎事宜，以致失去獲獎資格，主辦單位將不另外進行遞補抽獎，若因地址不全或遷移而導致獎品退回、冒領、遺失，恕不另補發。</span></span>
-									<span><span>3.</span><span>凡機會中獎者，獎品價值超過新台幣1,001元(含)以上，主辦單位依稅法規定將於年底寄發扣繳憑單給中獎人。</span></span>
-									<span><span>4.</span><span>贈品寄送範圍僅限台澎金馬。</span></span>
-								</p>
-								<div class="title">
-									<img src="images/activity_title_pic15.png" alt="">
-								</div>
-								<p>
-									<span><span>1.</span><span>本活動獎項僅提供居住在中華民國台澎金馬地區之居民，獎品恕不郵寄至海外地區。</span></span>
-									<span><span>2.</span><span>若活動因故無法進行時，主辦單位得以保留修改取消變更本活動之權利。</span></span>
-									<span><span>3.</span><span>活動過程中若因不可抗拒之因素或電腦系統故障等因素，直接或間接導致主辦單位無法履行活動相關義務或造成參加活動時登錄資料之遺失或毀損，主辦單位不負任何法律責任。</span></span>
-									<span><span>4.</span><span>參加活動後即表示您同意主辦單位所規定之活動辦法，不得以任何理由或法律途徑提出抗議。</span></span>
-									<span><span>5.</span><span>參加活動即表示同意該資料作為獲獎通知的聯繫依據，並同意台灣雪印以所提供之email未來作為通知活動訊息與資訊溝通之用，不另做其他用途，主辦單位不會將該資料提供予第三人使用。 </span></span>
-								</p>
 							</div>
 						</div>
 					</div>
@@ -112,7 +142,7 @@
 			<footer>
 				<div class="topcolumn">
 					<div class="home">
-						<a href="/">
+						<a href="index.html">
 							<img src="images/home_icon.png" alt="">
 						</a>
 					</div>
@@ -120,9 +150,7 @@
 						台灣雪印月曆明星徵選專屬網站 Copyright © 2017<span></span>台灣雪印股份有限公司 TEL：0800-081011 或 02-27581011
 					</div>
 				</div>
-				<div class="bottomcolumn">
-					<img src="images/topline.jpg" alt="">
-				</div>
+				<div class="bottomcolumn"></div>
 			</footer>
 		</div>
 		<script src="transformicons.js"></script>

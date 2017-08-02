@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>雪印明星2018月曆寶寶徵選活動</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/transformicons.css">
+		<!-- 最新編譯和最佳化的 CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="slick/slick.css">
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+
+		<!-- 最新編譯和最佳化的 JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<script src="slick/slick.js"></script>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			.retinaDiv
+			{
+				width:160px; 
+				height:80px; 
+				background:url(logo.png) no-repeat;
+				clear:both; 
+				margin-bottom:10px;
+			}
+
+			/* Retina圖片CSS */
+			@media screen and (-webkit-min-device-pixel-ratio: 2),
+			screen and (min--moz-device-pixel-ratio: 2)
+			{
+			    .retinaDiv 
+				{
+			    	background: url(logo-2x.png);
+					background-size:160px 80px;
+			    }
+			}
+
+		</style>
+		
+		<script src="jquery.retina.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.retina').retina();
+			});
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="bg"></div>
+			<header id="header" class="">
+				<div class="top"></div>
+				<div class="bottom">
+					<div class="logo">
+						<a href="index.html">
+							<img src="images/logo.png" alt="">
+						</a>
+					</div>
+					<div class="menubtn">
+						<button type="button" class="tcon tcon-menu--xbutterfly" aria-label="toggle menu">
+							<span class="tcon-menu__lines" aria-hidden="true"></span>
+							<span class="tcon-visuallyhidden">toggle menu</span>
+						</button>
+					</div>
+					<div class="menu">
+						<ul>
+							<li><a href="activity.html"><span>活動辦法</span></a></li>
+							<li><a href="participate_election.html"><span>參加徵選</span></a></li>
+							<li><a href="vote.html"><span>我要投票</span></a></li>
+							<li><a href="contact.html"><span>聯絡雪印</span></a></li>
+							<li><a href="prizelist.html"><span>得獎名單</span></a></li>
+							<li><a href="#"><span>雪印官網</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</header><!-- /header -->
+			<div class="content">
+				<div class="container-fluid">
+					<div class="prizearea">
+						<div class="vote_title_pic">
+							<img src="images/prize_title_pic.png" alt="">
+						</div>
+						<div class="vote_bg">
+							<div class="vote_content">
+								<div class="description">
+									<div class="title">
+										<img src="images/activity_title_pic07.png" alt="">
+									</div>
+									<p>
+										超人氣前50名者於10/6公佈<br>投票者抽獎名單將於10/27公佈<br>雪印決選封面或內頁明星寶寶名單將於11/10公佈。
+										
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="topcolumn">
+					<div class="home">
+						<a href="index.html">
+							<img src="images/home_icon.png" alt="">
+						</a>
+					</div>
+					<div class="copyright">
+						台灣雪印月曆明星徵選專屬網站 Copyright © 2017<span></span>台灣雪印股份有限公司 TEL：0800-081011 或 02-27581011
+					</div>
+				</div>
+				<div class="bottomcolumn"></div>
+			</footer>
+		</div>
+		<script src="transformicons.js"></script>
+		<script type="text/javascript">
+			transformicons.add('.tcon');
+		</script>
+		<script type="text/javascript">
+			$('.menubtn .tcon').on('click', function(event) {
+				if ($('.tcon').hasClass('tcon-transform')) {
+					$('.menu').fadeIn();
+				}else{
+					$('.menu').fadeOut();
+				}
+			});
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var num = '';
+				$('.prizeintro img').click(function(event) {
+					var num = '';
+					$('.popwindow .prize_intro').text(num);
+					var name = $(this).data('name');
+					var src = $(this).attr('src');
+					var content = $(this).parent().children('span').text();
+					var top = $(window).scrollTop();
+					$('.popwindow').fadeIn();
+					num = '<img src="'+ src +'" alt=""><div class="intro"><div class="title">'+ name +'</div><div class="intro_content">'+ content +'</div></div>';
+					$('.popwindow .prize_intro').append(num);
+					$('.popwindow').css('top',top);
+				});
+				$('.prize_intro,.layout').click(function(event) {
+					$('.popwindow').fadeOut();
+
+				});
+			});
+		</script>
+	</body>
+</html>

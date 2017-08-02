@@ -12,5 +12,10 @@
     "gulp-compass": "^2.1.0",
     "gulp-webserver": "^0.9.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gx7879@bitbucket.org/gx7879/snowmilk.git"
+  },
+  "homepage": "https://bitbucket.org/gx7879/snowmilk#readme",
   "description": ""
 }

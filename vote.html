@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Title Page</title>
+		<title>雪印明星2018月曆寶寶徵選活動</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/transformicons.css">
 		<!-- 最新編譯和最佳化的 CSS -->
@@ -24,16 +24,44 @@
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
+		<style>
+			.retinaDiv
+			{
+				width:160px; 
+				height:80px; 
+				background:url(logo.png) no-repeat;
+				clear:both; 
+				margin-bottom:10px;
+			}
+
+			/* Retina圖片CSS */
+			@media screen and (-webkit-min-device-pixel-ratio: 2),
+			screen and (min--moz-device-pixel-ratio: 2)
+			{
+			    .retinaDiv 
+				{
+			    	background: url(logo-2x.png);
+					background-size:160px 80px;
+			    }
+			}
+
+		</style>
+		
+		<script src="jquery.retina.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.retina').retina();
+			});
+		</script>
 	</head>
 	<body>
 		<div class="wrap">
+			<div class="bg"></div>
 			<header id="header" class="">
-				<div class="top">
-					<img src="images/topline.jpg" alt="">
-				</div>
+				<div class="top"></div>
 				<div class="bottom">
 					<div class="logo">
-						<a href="/">
+						<a href="index.html">
 							<img src="images/logo.png" alt="">
 						</a>
 					</div>
@@ -49,7 +77,7 @@
 							<li><a href="participate_election.html"><span>參加徵選</span></a></li>
 							<li><a href="vote.html"><span>我要投票</span></a></li>
 							<li><a href="contact.html"><span>聯絡雪印</span></a></li>
-							<li><a href="#"><span>得獎名單</span></a></li>
+							<li><a href="prizelist.html"><span>得獎名單</span></a></li>
 							<li><a href="#"><span>雪印官網</span></a></li>
 						</ul>
 					</div>
@@ -61,57 +89,88 @@
 						<div class="vote_title_pic">
 							<img src="images/vote_title_pic.png" alt="">
 						</div>
-						<div class="vote_content">
-							<div class="description">
-								<div class="title">
-									<img src="images/vote_title_pic01.png" alt="">
-								</div>
-								<p class="redfont">
-									106年9月1日中午12:00起至106年9月29日中午12:00截止。
-								</p>
-								<div class="title">
-									<img src="images/vote_title_pic01.png" alt="">
-								</div>
-								<p class="redfont">
-									106年9月18日中午12:00起至106年9月29日中午12:00截止。
-								</p>
-								<div class="title">
-									<img src="images/vote_title_pic01.png" alt="">
-								</div>
-								<p>
-									106/9/1~106/9/29利用手機編寫簡訊輸入活動代碼SNOW(皆為英文字母，大小寫不拘，簡訊費用由雪印負擔)傳送到55123，手機會收到簡訊投票密碼，選擇投票寶寶，填入您的資料及專屬投票密碼，資料正確即可完成投票。
-								</p>
-								<div class="btn_group">
-									<div class="topcolumn">
-										<div class="vote_btn"><img src="images/vote_btn01.png" alt=""></div>
-										<div class="vote_btn"><img src="images/vote_btn02.png" alt=""></div>
+						<div class="vote_bg">
+							<div class="vote_content">
+								<div class="description">
+									<div class="title">
+										<img src="images/vote_title_pic01.png" alt="">
 									</div>
-									<div class="bottomcolumn">
-										<div class="vote_btn"><img src="images/vote_btn03.png" alt=""></div>
-										<div class="vote_btn"><img src="images/vote_btn04.png" alt=""></div>
+									<p class="redfont">
+										106年9月1日中午12:00起至106年9月29日中午12:00截止。
+									</p>
+									<div class="title">
+										<img src="images/vote_title_pic02.png" alt="">
 									</div>
-								</div>
-							</div>
-							<div class="vote_photo_list">
-								<div class="line">
-									<img src="images/line.png" alt="">
-								</div>
-								<div class="topcolumn">
-									<div class="searcharea">
-										<div class="border">
-											<input type="text" name="" placeholder="依 編號/暱稱 查詢">
+									<p class="redfont">
+										106年9月18日中午12:00起至106年9月29日中午12:00截止。
+									</p>
+									<div class="title">
+										<img src="images/vote_title_pic01.png" alt="">
+									</div>
+									<p>
+										106/9/1~106/9/29利用手機編寫簡訊輸入活動代碼SNOW(皆為英文字母，大小寫不拘，簡訊費用由雪印負擔)傳送到55123，手機會收到簡訊投票密碼，選擇投票寶寶，填入您的資料及專屬投票密碼，資料正確即可完成投票。
+									</p>
+									<div class="btn_group">
+										<div class="topcolumn">
+											<div class="vote_btn"><a href="activity.html"><img src="images/vote_btn01.png" alt=""></a></div>
+											<div class="vote_btn"><a href="activity02.html"><img src="images/vote_btn02.png" alt=""></a></div>
 										</div>
-										<a href="#"><img src="images/search_btn.png" alt=""></a>
-									</div>
-									<div class="arrangement">
-										<div class="arrangement_btn">依編號排列</div>
-										<div class="arrangement_btn">依得票數排列</div>
+										<div class="bottomcolumn">
+											<div class="vote_btn"><a href="activity03.html"><img src="images/vote_btn03.png" alt=""></a></div>
+											<div class="vote_btn"><a href="activity04.html"><img src="images/vote_btn04.png" alt=""></a></div>
+										</div>
 									</div>
 								</div>
-								<div class="photo_list">
-									<div class="photoarea">
-										<div class="photobox">
-											<a href="vote_page.html">
+								<div class="vote_photo_list">
+									<div class="line">
+										<img src="images/line.png" alt="">
+									</div>
+									<div class="topcolumn">
+										<div class="searcharea">
+											<div class="border">
+												<input type="text" name="" placeholder="依 編號/暱稱 查詢">
+											</div>
+											<a href="#"><img src="images/search_btn.png" alt=""></a>
+										</div>
+										<div class="arrangement">
+											<div class="arrangement_btn">依編號排列</div>
+											<div class="arrangement_btn">依得票數排列</div>
+										</div>
+									</div>
+									<div class="photo_list">
+										<div class="photoarea">
+											<div class="photobox">
+												<a href="vote_page.html">
+													<div class="pic">
+														<img src="images/child_photo01.jpg" alt="">
+													</div>
+													<div class="info column_direction">
+														<div class="topcolumn">
+															<div class="number">
+																編號：994
+															</div>
+															<div class="name">
+																暱稱：奕豪
+															</div>
+															<div class="vote_num">
+																票數：5653
+															</div>
+														</div>
+														<div class="bottomcolumn">
+															<div class="leftcolumn">
+																<div class="social"><img src="images/fbicon.png" alt=""></div>
+																<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+															</div>
+															<div class="rightcolumn">
+																<a href="#">
+																	<img src="images/green_vote_btn.png" alt="">
+																</a>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="photobox">
 												<div class="pic">
 													<img src="images/child_photo01.jpg" alt="">
 												</div>
@@ -130,7 +189,7 @@
 													<div class="bottomcolumn">
 														<div class="leftcolumn">
 															<div class="social"><img src="images/fbicon.png" alt=""></div>
-															<div class="social"><img src="images/lineicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
 														</div>
 														<div class="rightcolumn">
 															<a href="#">
@@ -140,192 +199,432 @@
 													</div>
 													
 												</div>
-											</a>
-										</div>
-										<div class="photobox">
-											<div class="pic">
-												<img src="images/child_photo01.jpg" alt="">
 											</div>
-											<div class="info column_direction">
-												<div class="topcolumn">
-													<div class="number">
-														編號：994
-													</div>
-													<div class="name">
-														暱稱：奕豪
-													</div>
-													<div class="vote_num">
-														票數：5653
-													</div>
+											<div class="photobox">
+												<div class="pic">
+													<img src="images/child_photo01.jpg" alt="">
 												</div>
-												<div class="bottomcolumn">
-													<div class="leftcolumn">
-														<div class="social"><img src="images/fbicon.png" alt=""></div>
-														<div class="social"><img src="images/lineicon.png" alt=""></div>
+												<div class="info column_direction">
+													<div class="topcolumn">
+														<div class="number">
+															編號：994
+														</div>
+														<div class="name">
+															暱稱：奕豪
+														</div>
+														<div class="vote_num">
+															票數：5653
+														</div>
 													</div>
-													<div class="rightcolumn">
-														<a href="#">
-															<img src="images/green_vote_btn.png" alt="">
-														</a>
+													<div class="bottomcolumn">
+														<div class="leftcolumn">
+															<div class="social"><img src="images/fbicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+														</div>
+														<div class="rightcolumn">
+															<a href="#">
+																<img src="images/green_vote_btn.png" alt="">
+															</a>
+														</div>
 													</div>
+													
 												</div>
-												
 											</div>
-										</div>
-										<div class="photobox">
-											<div class="pic">
-												<img src="images/child_photo01.jpg" alt="">
-											</div>
-											<div class="info column_direction">
-												<div class="topcolumn">
-													<div class="number">
-														編號：994
-													</div>
-													<div class="name">
-														暱稱：奕豪
-													</div>
-													<div class="vote_num">
-														票數：5653
-													</div>
+											<div class="photobox">
+												<div class="pic">
+													<img src="images/child_photo01.jpg" alt="">
 												</div>
-												<div class="bottomcolumn">
-													<div class="leftcolumn">
-														<div class="social"><img src="images/fbicon.png" alt=""></div>
-														<div class="social"><img src="images/lineicon.png" alt=""></div>
+												<div class="info column_direction">
+													<div class="topcolumn">
+														<div class="number">
+															編號：994
+														</div>
+														<div class="name">
+															暱稱：奕豪
+														</div>
+														<div class="vote_num">
+															票數：5653
+														</div>
 													</div>
-													<div class="rightcolumn">
-														<a href="#">
-															<img src="images/green_vote_btn.png" alt="">
-														</a>
+													<div class="bottomcolumn">
+														<div class="leftcolumn">
+															<div class="social"><img src="images/fbicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+														</div>
+														<div class="rightcolumn">
+															<a href="#">
+																<img src="images/green_vote_btn.png" alt="">
+															</a>
+														</div>
 													</div>
+													
 												</div>
-												
 											</div>
-										</div>
-										<div class="photobox">
-											<div class="pic">
-												<img src="images/child_photo01.jpg" alt="">
-											</div>
-											<div class="info column_direction">
-												<div class="topcolumn">
-													<div class="number">
-														編號：994
-													</div>
-													<div class="name">
-														暱稱：奕豪
-													</div>
-													<div class="vote_num">
-														票數：5653
-													</div>
+											<div class="photobox">
+												<div class="pic">
+													<img src="images/child_photo02.jpg" alt="">
 												</div>
-												<div class="bottomcolumn">
-													<div class="leftcolumn">
-														<div class="social"><img src="images/fbicon.png" alt=""></div>
-														<div class="social"><img src="images/lineicon.png" alt=""></div>
+												<div class="info column_direction">
+													<div class="topcolumn">
+														<div class="number">
+															編號：994
+														</div>
+														<div class="name">
+															暱稱：奕豪
+														</div>
+														<div class="vote_num">
+															票數：5653
+														</div>
 													</div>
-													<div class="rightcolumn">
-														<a href="#">
-															<img src="images/green_vote_btn.png" alt="">
-														</a>
+													<div class="bottomcolumn">
+														<div class="leftcolumn">
+															<div class="social"><img src="images/fbicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+														</div>
+														<div class="rightcolumn">
+															<a href="#">
+																<img src="images/blue_vote_btn.png" alt="">
+															</a>
+														</div>
 													</div>
+													
 												</div>
-												
 											</div>
-										</div>
-										<div class="photobox">
-											<div class="pic">
-												<img src="images/child_photo02.jpg" alt="">
-											</div>
-											<div class="info column_direction">
-												<div class="topcolumn">
-													<div class="number">
-														編號：994
-													</div>
-													<div class="name">
-														暱稱：奕豪
-													</div>
-													<div class="vote_num">
-														票數：5653
-													</div>
+											<div class="photobox">
+												<div class="pic">
+													<img src="images/child_photo02.jpg" alt="">
 												</div>
-												<div class="bottomcolumn">
-													<div class="leftcolumn">
-														<div class="social"><img src="images/fbicon.png" alt=""></div>
-														<div class="social"><img src="images/lineicon.png" alt=""></div>
+												<div class="info column_direction">
+													<div class="topcolumn">
+														<div class="number">
+															編號：994
+														</div>
+														<div class="name">
+															暱稱：奕豪
+														</div>
+														<div class="vote_num">
+															票數：5653
+														</div>
 													</div>
-													<div class="rightcolumn">
-														<a href="#">
-															<img src="images/blue_vote_btn.png" alt="">
-														</a>
+													<div class="bottomcolumn">
+														<div class="leftcolumn">
+															<div class="social"><img src="images/fbicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+														</div>
+														<div class="rightcolumn">
+															<a href="#">
+																<img src="images/blue_vote_btn.png" alt="">
+															</a>
+														</div>
 													</div>
+													
 												</div>
-												
 											</div>
-										</div>
-										<div class="photobox">
-											<div class="pic">
-												<img src="images/child_photo03.jpg" alt="">
-											</div>
-											<div class="info column_direction">
-												<div class="topcolumn">
-													<div class="number">
-														編號：994
-													</div>
-													<div class="name">
-														暱稱：奕豪
-													</div>
-													<div class="vote_num">
-														票數：5653
-													</div>
+											<div class="photobox">
+												<div class="pic">
+													<img src="images/child_photo02.jpg" alt="">
 												</div>
-												<div class="bottomcolumn">
-													<div class="leftcolumn">
-														<div class="social"><img src="images/fbicon.png" alt=""></div>
-														<div class="social"><img src="images/lineicon.png" alt=""></div>
+												<div class="info column_direction">
+													<div class="topcolumn">
+														<div class="number">
+															編號：994
+														</div>
+														<div class="name">
+															暱稱：奕豪
+														</div>
+														<div class="vote_num">
+															票數：5653
+														</div>
 													</div>
-													<div class="rightcolumn">
-														<a href="#">
-															<img src="images/yellow_vote_btn.png" alt="">
-														</a>
+													<div class="bottomcolumn">
+														<div class="leftcolumn">
+															<div class="social"><img src="images/fbicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+														</div>
+														<div class="rightcolumn">
+															<a href="#">
+																<img src="images/blue_vote_btn.png" alt="">
+															</a>
+														</div>
 													</div>
+													
 												</div>
-												
 											</div>
-										</div>
-										<div class="photobox">
-											<div class="pic">
-												<img src="images/child_photo04.jpg" alt="">
-											</div>
-											<div class="info column_direction">
-												<div class="topcolumn">
-													<div class="number">
-														編號：994
-													</div>
-													<div class="name">
-														暱稱：奕豪
-													</div>
-													<div class="vote_num">
-														票數：5653
-													</div>
+											<div class="photobox">
+												<div class="pic">
+													<img src="images/child_photo02.jpg" alt="">
 												</div>
-												<div class="bottomcolumn">
-													<div class="leftcolumn">
-														<div class="social"><img src="images/fbicon.png" alt=""></div>
-														<div class="social"><img src="images/lineicon.png" alt=""></div>
+												<div class="info column_direction">
+													<div class="topcolumn">
+														<div class="number">
+															編號：994
+														</div>
+														<div class="name">
+															暱稱：奕豪
+														</div>
+														<div class="vote_num">
+															票數：5653
+														</div>
 													</div>
-													<div class="rightcolumn">
-														<a href="#">
-															<img src="images/red_vote_btn.png" alt="">
-														</a>
+													<div class="bottomcolumn">
+														<div class="leftcolumn">
+															<div class="social"><img src="images/fbicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+														</div>
+														<div class="rightcolumn">
+															<a href="#">
+																<img src="images/blue_vote_btn.png" alt="">
+															</a>
+														</div>
 													</div>
+													
 												</div>
-												
 											</div>
-										</div>
-										<div class="more_btn">
-											<a href="#">
-												<img src="images/more_btn.png" alt="">
-											</a>
+											<div class="photobox">
+												<div class="pic">
+													<img src="images/child_photo03.jpg" alt="">
+												</div>
+												<div class="info column_direction">
+													<div class="topcolumn">
+														<div class="number">
+															編號：994
+														</div>
+														<div class="name">
+															暱稱：奕豪
+														</div>
+														<div class="vote_num">
+															票數：5653
+														</div>
+													</div>
+													<div class="bottomcolumn">
+														<div class="leftcolumn">
+															<div class="social"><img src="images/fbicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+														</div>
+														<div class="rightcolumn">
+															<a href="#">
+																<img src="images/yellow_vote_btn.png" alt="">
+															</a>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+											<div class="photobox">
+												<div class="pic">
+													<img src="images/child_photo03.jpg" alt="">
+												</div>
+												<div class="info column_direction">
+													<div class="topcolumn">
+														<div class="number">
+															編號：994
+														</div>
+														<div class="name">
+															暱稱：奕豪
+														</div>
+														<div class="vote_num">
+															票數：5653
+														</div>
+													</div>
+													<div class="bottomcolumn">
+														<div class="leftcolumn">
+															<div class="social"><img src="images/fbicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+														</div>
+														<div class="rightcolumn">
+															<a href="#">
+																<img src="images/yellow_vote_btn.png" alt="">
+															</a>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+											<div class="photobox">
+												<div class="pic">
+													<img src="images/child_photo03.jpg" alt="">
+												</div>
+												<div class="info column_direction">
+													<div class="topcolumn">
+														<div class="number">
+															編號：994
+														</div>
+														<div class="name">
+															暱稱：奕豪
+														</div>
+														<div class="vote_num">
+															票數：5653
+														</div>
+													</div>
+													<div class="bottomcolumn">
+														<div class="leftcolumn">
+															<div class="social"><img src="images/fbicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+														</div>
+														<div class="rightcolumn">
+															<a href="#">
+																<img src="images/yellow_vote_btn.png" alt="">
+															</a>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+											<div class="photobox">
+												<div class="pic">
+													<img src="images/child_photo03.jpg" alt="">
+												</div>
+												<div class="info column_direction">
+													<div class="topcolumn">
+														<div class="number">
+															編號：994
+														</div>
+														<div class="name">
+															暱稱：奕豪
+														</div>
+														<div class="vote_num">
+															票數：5653
+														</div>
+													</div>
+													<div class="bottomcolumn">
+														<div class="leftcolumn">
+															<div class="social"><img src="images/fbicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+														</div>
+														<div class="rightcolumn">
+															<a href="#">
+																<img src="images/yellow_vote_btn.png" alt="">
+															</a>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+											<div class="photobox">
+												<div class="pic">
+													<img src="images/child_photo04.jpg" alt="">
+												</div>
+												<div class="info column_direction">
+													<div class="topcolumn">
+														<div class="number">
+															編號：994
+														</div>
+														<div class="name">
+															暱稱：奕豪
+														</div>
+														<div class="vote_num">
+															票數：5653
+														</div>
+													</div>
+													<div class="bottomcolumn">
+														<div class="leftcolumn">
+															<div class="social"><img src="images/fbicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+														</div>
+														<div class="rightcolumn">
+															<a href="#">
+																<img src="images/red_vote_btn.png" alt="">
+															</a>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+											<div class="photobox">
+												<div class="pic">
+													<img src="images/child_photo04.jpg" alt="">
+												</div>
+												<div class="info column_direction">
+													<div class="topcolumn">
+														<div class="number">
+															編號：994
+														</div>
+														<div class="name">
+															暱稱：奕豪
+														</div>
+														<div class="vote_num">
+															票數：5653
+														</div>
+													</div>
+													<div class="bottomcolumn">
+														<div class="leftcolumn">
+															<div class="social"><img src="images/fbicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+														</div>
+														<div class="rightcolumn">
+															<a href="#">
+																<img src="images/red_vote_btn.png" alt="">
+															</a>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+											<div class="photobox">
+												<div class="pic">
+													<img src="images/child_photo04.jpg" alt="">
+												</div>
+												<div class="info column_direction">
+													<div class="topcolumn">
+														<div class="number">
+															編號：994
+														</div>
+														<div class="name">
+															暱稱：奕豪
+														</div>
+														<div class="vote_num">
+															票數：5653
+														</div>
+													</div>
+													<div class="bottomcolumn">
+														<div class="leftcolumn">
+															<div class="social"><img src="images/fbicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+														</div>
+														<div class="rightcolumn">
+															<a href="#">
+																<img src="images/red_vote_btn.png" alt="">
+															</a>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+											<div class="photobox">
+												<div class="pic">
+													<img src="images/child_photo04.jpg" alt="">
+												</div>
+												<div class="info column_direction">
+													<div class="topcolumn">
+														<div class="number">
+															編號：994
+														</div>
+														<div class="name">
+															暱稱：奕豪
+														</div>
+														<div class="vote_num">
+															票數：5653
+														</div>
+													</div>
+													<div class="bottomcolumn">
+														<div class="leftcolumn">
+															<div class="social"><img src="images/fbicon.png" alt=""></div>
+															<div class="social"><img src="images/lineicon_mo.png" alt=""></div>
+														</div>
+														<div class="rightcolumn">
+															<a href="#">
+																<img src="images/red_vote_btn.png" alt="">
+															</a>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+											<div class="more_btn">
+												<a href="#">
+													<img src="images/more_btn.png" alt="">
+												</a>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -337,7 +636,7 @@
 			<footer>
 				<div class="topcolumn">
 					<div class="home">
-						<a href="/">
+						<a href="index.html">
 							<img src="images/home_icon.png" alt="">
 						</a>
 					</div>
@@ -345,9 +644,7 @@
 						台灣雪印月曆明星徵選專屬網站 Copyright © 2017<span></span>台灣雪印股份有限公司 TEL：0800-081011 或 02-27581011
 					</div>
 				</div>
-				<div class="bottomcolumn">
-					<img src="images/topline.jpg" alt="">
-				</div>
+				<div class="bottomcolumn"></div>
 			</footer>
 		</div>
 		<script src="transformicons.js"></script>
@@ -370,6 +667,11 @@
 					slidesToShow: 1,
 					prevArrow: '<button type="button" class="slick-prev"><img src="images/prev_btn.png" alt=""></button>',
 					nextArrow: '<button type="button" class="slick-next"><img src="images/next_btn.png" alt=""></button>'
+				});
+			});
+			$(document).ready(function() {
+				$('document').on('click', '.more_btn', function(event) {
+
 				});
 			});
 		</script>
