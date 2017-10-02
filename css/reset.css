@@ -18,4 +18,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 * { font-family: 微軟正黑體, sans-serif !important; font-weight: 600 !important; }
 
+.glyphicon { font-family: "Glyphicons Halflings" !important; }
+
 /*# sourceMappingURL=reset.css.map */

@@ -12,6 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="slick/slick.css">
 		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+		<link rel="stylesheet" type="text/css" href="dist/css/bootstrap-datepicker3.css">
 		<!-- jQuery -->
 		<script src="http://code.jquery.com/jquery.js"></script>
 
@@ -121,7 +122,9 @@
 												</li>
 											</ul>
 											<div class="uploadbtn">
-												<img src="images/upload_btn.png" alt="">
+												<a href="javascript:;" class="a-upload">
+													<input type="file" name="" id="">
+												</a>
 											</div>
 										</div>
 									</div>
@@ -196,12 +199,21 @@
 														*須與健保卡資料相同
 													</div>
 												</div>
-												<div class="input_area">
-													<input type="text" name="" value="" placeholder="">
+												<div class="input_area input-group date datepicker">
+													<input type="text" name="" value="" placeholder="" class="form-control">
+													<div class="input-group-addon">
+														<span class="glyphicon glyphicon-th"></span>
+													</div>
 													<div class="tip desktop">
 														*須與健保卡資料相同
 													</div>
 												</div>
+												<!-- <div class="input-group date datepicker">
+													<input type="text" class="form-control">
+													<div class="input-group-addon">
+														<span class="glyphicon glyphicon-th "></span>
+													</div>
+												</div> -->
 											</div>
 										</div>
 										<div class="singlecolumn">
@@ -452,6 +464,8 @@
 
 		</div>
 		<script src="transformicons.js"></script>
+		<script type="text/javascript" src="dist/js/bootstrap-datepicker.min.js"></script>
+		<script type="text/javascript" src="dist/locales/bootstrap-datepicker.zh-CN.min.js" charset="UTF-8"></script>
 		<script type="text/javascript">
 			transformicons.add('.tcon');
 		</script>
@@ -474,5 +488,13 @@
 				});
 			});
 		</script>
+		<script type="text/javascript">
+			$(function(){
+				$('.datepicker').datepicker({
+					language: 'zh-CN',
+					 autoclose: true
+				});
+			})
+	</script>
 	</body>
 </html>

@@ -286,5 +286,21 @@
 				});
 			});
 		</script>
+		<!-- 修改開始 -->
+		<script>
+			function resizebox(){
+				var photobox = document.querySelectorAll('.photobox .pic');
+				for (var i = 0; i < photobox.length; i++) {
+					var pw = photobox[i].clientWidth;
+					photobox[i].style.height = pw+'px';
+					console.log(pw);
+				}
+			}
+			window.addEventListener('load',resizebox);
+			resizebox();
+			window.addEventListener('resize',resizebox);
+
+		</script>
+		<!-- 修改結束 -->
 	</body>
 </html>
