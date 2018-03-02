@@ -601,6 +601,7 @@ header
 									.prizeintro
 										&:nth-child(2)
 											height: 240px
+
 					.prizecontent
 						+display-flex
 						+flex-wrap(wrap)
@@ -1667,7 +1668,20 @@ footer
 										.prizeintro
 											&:nth-child(2)
 												height: 250px
-
+					.prizebox
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						.leftcolumn
+							margin-right: 5px
+							max-width: calc(50% - 5px)
+							flex: 1 0 calc(50% - 5px)
+						.rightcolumn
+							margin-left: 5px
+							max-width: calc(50% - 5px)
+							flex: 1 0 calc(50% - 5px)
 					.vote_photo_list
 						.line
 							margin-bottom: 20px
@@ -2323,6 +2337,24 @@ footer
 											&:nth-child(2)
 												height: 157px
 												border-bottom-width: 0
+						.prizebox
+							display: -webkit-flex
+							display: -moz-flex
+							display: -ms-flex
+							display: -o-flex
+							display: flex
+							.leftcolumn
+								margin-right: 5px
+								.prizecontent
+									.rank
+										max-width: 100%
+										flex: 1 0 100%
+							.rightcolumn
+								margin-left: 5px
+								.prizecontent
+									.rank
+										max-width: 100%
+										flex: 1 0 100%
 						.prizecontent
 							+display-flex
 							+flex-wrap(nowrap)
